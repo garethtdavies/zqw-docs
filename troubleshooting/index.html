@@ -327,7 +327,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../using/" title="Using zec-qt-wallet" class="md-nav__link">
+    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
       Using zec-qt-wallet
     </a>
   </li>
@@ -429,6 +429,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sending-from-a-sprout-address-to-a-sapling-one-results-in-error" title="Sending from a Sprout address to a Sapling one results in error" class="md-nav__link">
+    Sending from a Sprout address to a Sapling one results in error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-error-messages" title="Common error messages" class="md-nav__link">
     Common error messages
   </a>
@@ -465,13 +472,6 @@
         <li class="md-nav__item">
   <a href="#my-issue-isnt-resolved" title="My issue isn't resolved" class="md-nav__link">
     My issue isn't resolved
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-from-a-sprout-address-to-a-sapling-one" title="Sending from a Sprout address to a Sapling one" class="md-nav__link">
-    Sending from a Sprout address to a Sapling one
   </a>
   
 </li>
@@ -619,6 +619,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sending-from-a-sprout-address-to-a-sapling-one-results-in-error" title="Sending from a Sprout address to a Sapling one results in error" class="md-nav__link">
+    Sending from a Sprout address to a Sapling one results in error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-error-messages" title="Common error messages" class="md-nav__link">
     Common error messages
   </a>
@@ -659,13 +666,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#sending-from-a-sprout-address-to-a-sapling-one" title="Sending from a Sprout address to a Sapling one" class="md-nav__link">
-    Sending from a Sprout address to a Sapling one
-  </a>
-  
-</li>
-      
       
       
       
@@ -688,6 +688,7 @@
                 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="the-zcashd-debug-log">The <code>zcashd</code> debug log<a class="headerlink" href="#the-zcashd-debug-log" title="Permanent link">&para;</a></h2>
+<p>The <code>debug.log</code> file is the first place to start for diagnosing issues.</p>
 <h2 id="my-node-isnt-syncing">My node isn&rsquo;t syncing<a class="headerlink" href="#my-node-isnt-syncing" title="Permanent link">&para;</a></h2>
 <h2 id="my-transaction-didnt-get-mined">My transaction didn&rsquo;t get mined<a class="headerlink" href="#my-transaction-didnt-get-mined" title="Permanent link">&para;</a></h2>
 <h2 id="how-to-perform-a-wallet-rescan">How to perform a wallet rescan<a class="headerlink" href="#how-to-perform-a-wallet-rescan" title="Permanent link">&para;</a></h2>
@@ -696,6 +697,7 @@
 <h2 id="if-you-have-no-connections">If you have no connections<a class="headerlink" href="#if-you-have-no-connections" title="Permanent link">&para;</a></h2>
 <h2 id="some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab">Some of my shielded transactions are not displayed in the transaction tab<a class="headerlink" href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Permanent link">&para;</a></h2>
 <h2 id="i-cant-generate-a-new-sprout-address">I can&rsquo;t generate a new Sprout address<a class="headerlink" href="#i-cant-generate-a-new-sprout-address" title="Permanent link">&para;</a></h2>
+<h2 id="sending-from-a-sprout-address-to-a-sapling-one-results-in-error">Sending from a Sprout address to a Sapling one results in error<a class="headerlink" href="#sending-from-a-sprout-address-to-a-sapling-one-results-in-error" title="Permanent link">&para;</a></h2>
 <h2 id="common-error-messages">Common error messages<a class="headerlink" href="#common-error-messages" title="Permanent link">&para;</a></h2>
 <h3 id="could-not-start-embedded-zcashd">Could not start embedded zcashd<a class="headerlink" href="#could-not-start-embedded-zcashd" title="Permanent link">&para;</a></h3>
 <p>This means zec-qt-wallet couldn&rsquo;t start its embedded zcashd for some reason. zec-qt-wallet will show you another dialog box with the error reported from zcashd for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:</p>
@@ -709,7 +711,7 @@
 <h3 id="not-enough-balance-when-sending-transactions">Not enough balance when sending transactions<a class="headerlink" href="#not-enough-balance-when-sending-transactions" title="Permanent link">&para;</a></h3>
 <p>The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn&rsquo;t let you spent unconfirmed funds yet. Please wait for 1-2 blocks for the funds to confirm and retry the transaction.</p>
 <h2 id="my-issue-isnt-resolved">My issue isn&rsquo;t resolved<a class="headerlink" href="#my-issue-isnt-resolved" title="Permanent link">&para;</a></h2>
-<h2 id="sending-from-a-sprout-address-to-a-sapling-one">Sending from a Sprout address to a Sapling one<a class="headerlink" href="#sending-from-a-sprout-address-to-a-sapling-one" title="Permanent link">&para;</a></h2>
+<p>Open an issue on Github&hellip;</p>
                 
                   
                 
@@ -730,7 +732,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../using/" title="Using zec-qt-wallet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>

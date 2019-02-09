@@ -401,7 +401,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../using/" title="Using zec-qt-wallet" class="md-nav__link">
+    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
       Using zec-qt-wallet
     </a>
   </li>
@@ -550,28 +550,45 @@
                 <h1 id="installing-zec-qt-wallet">Installing zec-qt-wallet<a class="headerlink" href="#installing-zec-qt-wallet" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="download-and-install">Download and Install<a class="headerlink" href="#download-and-install" title="Permanent link">&para;</a></h2>
-<p>zec-qt-wallet runs on Windows, macOS and Linux. Follow the instructions below for the platform of your choice. To compile from source see <a href="compile-from-source">this section</a>.</p>
-<details class="info"><summary>Windows instructions (click to expand)</summary><p>Download and run the .msi installer and follow the prompts. Alternately, you can download the release binary, unzip it and double click on zec-qt-wallet to start.</p>
-</details>
-<details class="info"><summary>macOS instructions (click to expand)</summary><p>Double-click on the .dmg file to open it, and drag zec-qt-wallet on to the Applications link to install. You will need to give authorization for the program to run.</p>
-</details>
-<details class="info"><summary>Linux instructions (click to expand)</summary><p>If you are on Debian/Ubuntu, please download the <code>.deb</code> package and install it.
-<code>sudo dpkg -i linux-deb-zec-qt-wallet-v0.5.9.deb
-sudo apt install -f</code></p>
-<p>Or you can download and run the binaries directly.
-<code>tar -xvf zec-qt-wallet-v0.5.9.tar.gz
-./zec-qt-wallet-v0.5.9/zec-qt-wallet</code> </p>
-</details>
+<p>zec-qt-wallet runs on Windows, macOS and Linux and is <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">available to download</a> from the releases page of the project Github repository. Follow the instructions below for the platform of your choice to install zec-qt-wallet. To compile from source see <a href="compile-from-source">this section</a>.</p>
+<p>??? info &ldquo;Windows instructions (click to expand)&rdquo;</p>
+<pre><code>[Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and run the .msi installer (named Windows-installer-zec-qt-wallet-vx.x.x.msi) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the release binary (named Windows-binaries-zec-qt-wallet-vx.x.x.zip), unzip it and double click on zec-qt-wallet to start.
+</code></pre>
+<p>??? info &ldquo;macOS instructions (click to expand)&rdquo;</p>
+<pre><code>[Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and double-click on the .dmg file to open it, and drag zec-qt-wallet on to the Applications link to install. You will need to give authorization for the program to run.
+</code></pre>
+<p>??? info &ldquo;Linux instructions (click to expand)&rdquo;</p>
+<pre><code>If you are on Debian/Ubuntu, please download the `.deb` package and install it.
+```
+sudo dpkg -i linux-deb-zec-qt-wallet-v0.5.9.deb
+sudo apt install -f
+```
+
+Or you can download and run the binaries directly.
+```
+tar -xvf zec-qt-wallet-v0.5.9.tar.gz
+./zec-qt-wallet-v0.5.9/zec-qt-wallet
+```
+</code></pre>
 <h2 id="zcashd">zcashd<a class="headerlink" href="#zcashd" title="Permanent link">&para;</a></h2>
-<p>zec-qt-wallet needs a Zcash node running zcashd. If you already have a zcashd node running, zec-qt-wallet will connect to it. </p>
-<p>If you don&rsquo;t have one, zec-qt-wallet will start its embedded zcashd node. </p>
+<p>zec-qt-wallet needs a Zcash node running <code>zcashd</code>. If you already have a <code>zcashd</code> node running, zec-qt-wallet will connect to it. </p>
+<p>If you don&rsquo;t have one running, zec-qt-wallet will start its embedded <code>zcashd</code> node. </p>
 <p>Additionally, if this is the first time you&rsquo;re running zec-qt-wallet or a zcashd daemon, zec-qt-wallet will download the zcash params (~1.7 GB) and configure <code>zcash.conf</code> for you. </p>
-<p>Pass <code>--no-embedded</code> to disable the embedded zcashd and force zec-qt-wallet to connect to an external node.</p>
+<div class="admonition tip">
+<p class="admonition-title">Disable embedded <code>zcashd</code></p>
+<p>To force disabling the embedded <code>zcashd</code> and only connect to a remote node pass <code>--no-embedded</code> to the startup command.</p>
+</div>
 <h3 id="system-requirements">System requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
+<p>If using the embedded <code>zcashd</code> the recommended system requirements are 5GB of free RAM and 10GB of free disk (the size of the blockchain increases over time).</p>
 <h2 id="compiling-from-source">Compiling from source<a class="headerlink" href="#compiling-from-source" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet is written in C++ 14, and can be compiled with g++/clang++/visual c++. It also depends on Qt5, which you can get from <a href="https://www.qt.io/download">here</a>. Note that if you are compiling from source, you won&rsquo;t get the embedded zcashd by default. You can either run an external zcashd, or compile zcashd as well. </p>
 <p>See the instructions for <a href="/setting-up-build-env">setting up a build environment</a> and detailed build instructions for each platform <a href="/compile-from-source">here</a>.</p>
 <h2 id="upgrading">Upgrading<a class="headerlink" href="#upgrading" title="Permanent link">&para;</a></h2>
+<p>It is important to keep your version of zec-qt-wallet up to date as new features are regularely added and bugs fixed. To download simply follow the instructions to install as your data directory and wallet will be untouched throughout. </p>
+<div class="admonition warning">
+<p class="admonition-title"><code>zcashd</code> reaches end of service halt after 16 weeks</p>
+<p>If you are using the embedded <code>zcashd</code> then after 16 weeks from release <code>zcashd</code> will reach an end of service halt and will shutdown. Simply update your version of <code>zec-qt-wallet</code> to continue. </p>
+</div>
                 
                   
                 

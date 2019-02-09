@@ -13,7 +13,7 @@
         <meta name="description" content="A zcashd wrapper GUI">
       
       
-        <link rel="canonical" href="https://github.com/ZcashFoundation/zec-qt-wallet/using/">
+        <link rel="canonical" href="https://github.com/ZcashFoundation/zec-qt-wallet/using-zec-qt-wallet/">
       
       
         <meta name="author" content="Zcash Foundation">
@@ -395,8 +395,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#address-book" title="Address Book" class="md-nav__link">
-    Address Book
+  <a href="#address-book" title="Address book" class="md-nav__link">
+    Address book
   </a>
   
 </li>
@@ -443,8 +443,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zeq-qt-wallet-options" title="zeq-qt-wallet Options" class="md-nav__link">
-    zeq-qt-wallet Options
+  <a href="#zeq-qt-wallet-options" title="zeq-qt-wallet options" class="md-nav__link">
+    zeq-qt-wallet options
   </a>
   
     <nav class="md-nav">
@@ -671,8 +671,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#address-book" title="Address Book" class="md-nav__link">
-    Address Book
+  <a href="#address-book" title="Address book" class="md-nav__link">
+    Address book
   </a>
   
 </li>
@@ -719,8 +719,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zeq-qt-wallet-options" title="zeq-qt-wallet Options" class="md-nav__link">
-    zeq-qt-wallet Options
+  <a href="#zeq-qt-wallet-options" title="zeq-qt-wallet options" class="md-nav__link">
+    zeq-qt-wallet options
   </a>
   
     <nav class="md-nav">
@@ -830,7 +830,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/adityapk00/zqw-docs/edit/master/docs/using.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/adityapk00/zqw-docs/edit/master/docs/using-zec-qt-wallet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="using-zec-qt-wallet">Using Zec-QT-Wallet<a class="headerlink" href="#using-zec-qt-wallet" title="Permanent link">&para;</a></h1>
@@ -841,17 +841,24 @@
 These parameters are currently over 1.7GB in size.</p>
 </div>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>Now that you have zec-qt-wallet <a href="/installation">installed</a> it is time to start using the software. </p>
+<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <code>zcash.conf</code> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time consuiming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom left corner which displays the sync percentage.</p>
+<div class="admonition note">
+<p class="admonition-title">Initial Sync</p>
+<p>The blockchain is around xxx GB in size and will take around 8+ hours to download.</p>
+</div>
 <h2 id="generating-a-new-address">Generating a new address<a class="headerlink" href="#generating-a-new-address" title="Permanent link">&para;</a></h2>
+<p>Visting the <strong>Receive</strong> tab will show all current addresses and enable you to generate new ones. To learn about the different types of addresses transparent, shielded (Sprout and Sapling) please visit <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">this page</a>. It is not possible to remove an address from the wallet. Whenever a new address is generated care should be taken to ensure that a backup of the wallet is taken. The QR code may be scanned by a compatible device.</p>
 <h2 id="sending-a-transaction">Sending a transaction<a class="headerlink" href="#sending-a-transaction" title="Permanent link">&para;</a></h2>
 <h3 id="viewing-transaction-on-explorer">Viewing transaction on explorer<a class="headerlink" href="#viewing-transaction-on-explorer" title="Permanent link">&para;</a></h3>
 <h3 id="pay-zcash-uri">Pay Zcash URI<a class="headerlink" href="#pay-zcash-uri" title="Permanent link">&para;</a></h3>
-<h2 id="address-book">Address Book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
+<h2 id="address-book">Address book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
 <h2 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">&para;</a></h2>
 <h3 id="export-a-single-private-key">Export a single private key<a class="headerlink" href="#export-a-single-private-key" title="Permanent link">&para;</a></h3>
 <h3 id="export-all-private-keys">Export all private keys<a class="headerlink" href="#export-all-private-keys" title="Permanent link">&para;</a></h3>
 <h3 id="backing-up-walletdat">Backing up wallet.dat<a class="headerlink" href="#backing-up-walletdat" title="Permanent link">&para;</a></h3>
 <h2 id="importing-private-keys">Importing private keys<a class="headerlink" href="#importing-private-keys" title="Permanent link">&para;</a></h2>
-<h2 id="zeq-qt-wallet-options">zeq-qt-wallet Options<a class="headerlink" href="#zeq-qt-wallet-options" title="Permanent link">&para;</a></h2>
+<h2 id="zeq-qt-wallet-options">zeq-qt-wallet options<a class="headerlink" href="#zeq-qt-wallet-options" title="Permanent link">&para;</a></h2>
 <h3 id="remember-shielded-transactions">Remember shielded transactions<a class="headerlink" href="#remember-shielded-transactions" title="Permanent link">&para;</a></h3>
 <h3 id="allow-custom-fees">Allow custom fees<a class="headerlink" href="#allow-custom-fees" title="Permanent link">&para;</a></h3>
 <h3 id="shield-change-automatically-to-sapling-address">Shield change automatically to Sapling address<a class="headerlink" href="#shield-change-automatically-to-sapling-address" title="Permanent link">&para;</a></h3>
