@@ -41,6 +41,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.arithmatex
 
+# Additional 
 copyright: If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
 
 extra_css:
@@ -53,7 +54,7 @@ nav:
     - Installing on Windows, Mac and Linux: installation.md
     - Compiling from source: compile-from-source.md
     - Setting up a build environment: setting-up-build-env.md
-  - Using zec-qt-wallet: using.md
+  - Using zec-qt-wallet: using-zec-qt-wallet.md
   - Troubleshooting Issues: troubleshooting.md
   - Turnstile Migration: turnstile-migration.md
   - Android Companion App: android.md

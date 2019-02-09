@@ -3,6 +3,7 @@
 ---
 
 ## The `zcashd` debug log
+The `debug.log` file is the first place to start for diagnosing issues.
 
 ## My node isn't syncing
 
@@ -12,13 +13,15 @@
 
 ## How to perform a reindex
 
-## If your displayed balance is incorrect
+## The displayed balance is incorrect
 
-## If you have no connections
+## `zcashd` has no connections
 
 ## Some of my shielded transactions are not displayed in the transaction tab
 
 ## I can't generate a new Sprout address
+
+## Sending from a Sprout address to a Sapling one results in error
 
 ## Common error messages
 
@@ -40,5 +43,4 @@ Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from zcash.conf. If 
 The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn't let you spent unconfirmed funds yet. Please wait for 1-2 blocks for the funds to confirm and retry the transaction.
 
 ## My issue isn't resolved
-
-## Sending from a Sprout address to a Sapling one
+Open an issue on Github or tweet at [@zecqtwallet](https://twitter.com/zecqtwallet) for help.
