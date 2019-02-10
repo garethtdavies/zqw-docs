@@ -488,6 +488,26 @@
     Encrypted Memo field
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#including-a-reply-address" title="Including a reply address" class="md-nav__link">
+    Including a reply address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replying-to-a-memo" title="Replying to a memo" class="md-nav__link">
+    Replying to a memo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -764,6 +784,26 @@
     Encrypted Memo field
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#including-a-reply-address" title="Including a reply address" class="md-nav__link">
+    Including a reply address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replying-to-a-memo" title="Replying to a memo" class="md-nav__link">
+    Replying to a memo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -837,21 +877,24 @@
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The first time zec-qt-wallet starts it will create a sample <code>zcash.conf</code> file as well as downloading the parameters required for sending and validating transactions. 
-These parameters are currently over 1.7GB in size.</p>
+<p>The first time zec-qt-wallet starts it will create a <code>zcash.conf</code> file with default values as well as downloading the parameters required for sending and validating transactions. 
+These parameters are currently around 1.7GB in size and only need to be downloaded once.</p>
 </div>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>Now that you have zec-qt-wallet <a href="/installation">installed</a> it is time to start using the software. </p>
-<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <code>zcash.conf</code> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time consuiming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom left corner which displays the sync percentage.</p>
+<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <code>zcash.conf</code> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom left corner which displays the sync percentage.</p>
 <div class="admonition note">
 <p class="admonition-title">Initial Sync</p>
-<p>The blockchain is around xxx GB in size and will take around 8+ hours to download.</p>
+<p>The blockchain is around xxx GB in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.</p>
 </div>
 <h2 id="generating-a-new-address">Generating a new address<a class="headerlink" href="#generating-a-new-address" title="Permanent link">&para;</a></h2>
 <p>Visting the <strong>Receive</strong> tab will show all current addresses and enable you to generate new ones. To learn about the different types of addresses transparent, shielded (Sprout and Sapling) please visit <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">this page</a>. It is not possible to remove an address from the wallet. Whenever a new address is generated care should be taken to ensure that a backup of the wallet is taken. The QR code may be scanned by a compatible device.</p>
 <h2 id="sending-a-transaction">Sending a transaction<a class="headerlink" href="#sending-a-transaction" title="Permanent link">&para;</a></h2>
+<p>Show fields used to send&hellip;</p>
 <h3 id="viewing-transaction-on-explorer">Viewing transaction on explorer<a class="headerlink" href="#viewing-transaction-on-explorer" title="Permanent link">&para;</a></h3>
+<p>Once complete, the txid will be displayed. Right click to bring up a menu to view on the block explorer. Alternitavely for any transactions on the <strong>Transactions</strong> tab right click and choose &ldquo;View on block explorer&rdquo;.</p>
 <h3 id="pay-zcash-uri">Pay Zcash URI<a class="headerlink" href="#pay-zcash-uri" title="Permanent link">&para;</a></h3>
+<p>How to use</p>
 <h2 id="address-book">Address book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
 <h2 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">&para;</a></h2>
 <h3 id="export-a-single-private-key">Export a single private key<a class="headerlink" href="#export-a-single-private-key" title="Permanent link">&para;</a></h3>
@@ -864,6 +907,8 @@ These parameters are currently over 1.7GB in size.</p>
 <h3 id="shield-change-automatically-to-sapling-address">Shield change automatically to Sapling address<a class="headerlink" href="#shield-change-automatically-to-sapling-address" title="Permanent link">&para;</a></h3>
 <h3 id="connect-via-tor">Connect via TOR<a class="headerlink" href="#connect-via-tor" title="Permanent link">&para;</a></h3>
 <h2 id="encrypted-memo-field">Encrypted Memo field<a class="headerlink" href="#encrypted-memo-field" title="Permanent link">&para;</a></h2>
+<h3 id="including-a-reply-address">Including a reply address<a class="headerlink" href="#including-a-reply-address" title="Permanent link">&para;</a></h3>
+<h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
 <h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
 <h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
 <h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
