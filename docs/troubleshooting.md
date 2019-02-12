@@ -3,7 +3,18 @@
 ---
 
 ## The `zcashd` debug log
-The `debug.log` file is the first place to start for diagnosing issues.
+
+The `debug.log` file is the first place to start for troubleshooting issues. The file is located in the data directory and by default is located in the following locations:
+
+* Windows: `%HOMEPATH%\AppData\Roaming\Zcash\debug.log`
+* macOS: `~/Library/Application Support/Zcash/debug.log`
+* Linux: `~/.zcash/debug.log`
+
+If you have specified a custom `datadir` option then the `debug.log` file will be located in that directory. Using a tool such as `tail` you can view the last 100 lines with the following command:
+
+``` bash
+tail -n 100 ~/.zcash/debug.log
+```
 
 ## My node isn't syncing
 

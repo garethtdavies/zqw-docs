@@ -40,6 +40,7 @@ markdown_extensions:
   - markdown.extensions.tables
   - pymdownx.details
   - pymdownx.arithmatex
+  - codehilite
 
 # Additional 
 copyright: If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
