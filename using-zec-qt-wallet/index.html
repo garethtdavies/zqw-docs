@@ -877,25 +877,42 @@
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The first time zec-qt-wallet starts it will create a <code>zcash.conf</code> file with default values as well as downloading the parameters required for sending and validating transactions. 
-These parameters are currently around 1.7GB in size and only need to be downloaded once.</p>
+<p>The first time zec-qt-wallet starts it will create a <code>zcash.conf</code> file with default configuration values as well as downloading the parameters required for sending and validating transactions. These parameters are currently around 1.7GB in size and only need to be downloaded once.</p>
 </div>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>Now that you have zec-qt-wallet <a href="/installation">installed</a> it is time to start using the software. </p>
-<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <code>zcash.conf</code> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom left corner which displays the sync percentage.</p>
-<div class="admonition note">
+<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <code>zcash.conf</code> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner wof zec-qt-wallet which displays the number of blocks downloaded and a sync percentage.</p>
+<div class="admonition info">
 <p class="admonition-title">Initial Sync</p>
-<p>The blockchain is around xxx GB in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.</p>
+<p>The blockchain is around <strong>21GB</strong> in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.</p>
 </div>
 <h2 id="generating-a-new-address">Generating a new address<a class="headerlink" href="#generating-a-new-address" title="Permanent link">&para;</a></h2>
-<p>Visting the <strong>Receive</strong> tab will show all current addresses and enable you to generate new ones. To learn about the different types of addresses transparent, shielded (Sprout and Sapling) please visit <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">this page</a>. It is not possible to remove an address from the wallet. Whenever a new address is generated care should be taken to ensure that a backup of the wallet is taken. The QR code may be scanned by a compatible device.</p>
+<p>Visting the <strong>Receive</strong> tab of zec-qt-wallet will show all current addresses and enable you to generate new ones. To learn about the different types of addresses available which are transparent, shielded (Sprout and Sapling) please visit <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">this page</a>. It is not possible to remove an address from the wallet once it has been generated.</p>
+<div class="admonition tip">
+<p class="admonition-title">Backup after generating a new address</p>
+<p>Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be <a href="#">recreated from a seed</a> whereas transaparent or Sprout addresses either require the private key or a wallet.dat backup made after the address was created. See the <a href="#">Backup section</a> for more details.</p>
+</div>
+<p><img alt="Addresses Tab" src="/images/addresses.png" />    </p>
+<p>Transparent addresses are automatically created when clicking the <strong>t-Addr</strong> button as transparent addressess should not be reused. Unlike transparent addresses it is fine to reuse shielded addresses and so new addresses can be manually created via the <strong>New Address</strong> button.</p>
+<p>Optionally add a label to easily identify the address and add it to your address book. A QR code is also provided for the address which may be used to receive funds.</p>
 <h2 id="sending-a-transaction">Sending a transaction<a class="headerlink" href="#sending-a-transaction" title="Permanent link">&para;</a></h2>
-<p>Show fields used to send&hellip;</p>
+<p>Once you&rsquo;ve generated an address and have sent some funds to it, you can send some ZEC. Click on the <strong>Send</strong> tab:</p>
+<p><img alt="Send Tab" src="/images/semd.png" /></p>
+<p>You can only send funds with at least one confirmation. While transactions are being confirmed they are easily identificable as they are highlighted in red.</p>
+<p>Choose an address with funds in it and enter the receipient address. You may specifify multiple recipients per transaction and there may be a mixture of transparent and shielded recipients. The Memo field is only available when sending <strong>to</strong> a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the Options section if you wish to customise this behviour and understand the implications.</p>
+<div class="admonition note">
+<p class="admonition-title">Shielded send requirements</p>
+<p>Sending Sapling transaction requires only around 40Mb of memory and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 30 seconds and require 1.3GB of memory.</p>
+</div>
+<p>// TODO send screen    </p>
 <h3 id="viewing-transaction-on-explorer">Viewing transaction on explorer<a class="headerlink" href="#viewing-transaction-on-explorer" title="Permanent link">&para;</a></h3>
 <p>Once complete, the txid will be displayed. Right click to bring up a menu to view on the block explorer. Alternitavely for any transactions on the <strong>Transactions</strong> tab right click and choose &ldquo;View on block explorer&rdquo;.</p>
+<p>This will open up the default block explorer of xxxx. If your transaction is a shielded one there will not be any public information available except the mining fee (as in the example transaction above). Once the funds are confirming any values will be highlighted in red until they receive one confirmation and will not be spendable until they have had one confirmation.</p>
 <h3 id="pay-zcash-uri">Pay Zcash URI<a class="headerlink" href="#pay-zcash-uri" title="Permanent link">&para;</a></h3>
-<p>How to use</p>
+<p>// TODO</p>
+<p>Paste in a Zcash URI.</p>
 <h2 id="address-book">Address book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
+<p>The address book makes managing addresses and labels simple.</p>
 <h2 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">&para;</a></h2>
 <h3 id="export-a-single-private-key">Export a single private key<a class="headerlink" href="#export-a-single-private-key" title="Permanent link">&para;</a></h3>
 <h3 id="export-all-private-keys">Export all private keys<a class="headerlink" href="#export-all-private-keys" title="Permanent link">&para;</a></h3>
