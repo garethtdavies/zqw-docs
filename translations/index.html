@@ -519,17 +519,18 @@
 <h2 id="testing-translations">Testing translations<a class="headerlink" href="#testing-translations" title="Permanent link">&para;</a></h2>
 <p>If you want to test the translations locally, you&rsquo;ll have to compile zec-qt-wallet. Please see <a href="https://github.com/ZcashFoundation/zec-qt-wallet#compiling-from-source">compiling from source</a> instructions.</p>
 <p>Save the linguist file, and then, from a command prompt (remember to replace <code>ln</code> with your language code):</p>
-<pre><code># Compile the translations
+<div class="codehilite"><pre><span></span># Compile the translations
 /path/to/qt5/bin/lrelease res/zec_qt_wallet_&lt;ln&gt;.ts
-# Add to the Qt5's base translations
+# Add to the Qt5&#39;s base translations
 /path/to/qt5/bin/lconvert -o res/zec_&lt;ln&gt;.qm res/zec_qt_wallet_&lt;ln&gt;.qm /path/to/qt5/translations/qtbase_&lt;ln&gt;.qm
 # Copy to the res folder
 mv res/zec_&lt;ln&gt;.qm res/zec_qt_wallet_&lt;ln&gt;.qm
-</code></pre>
+</pre></div>
+
 
 <p>After this, you can launch your compiled zec-qt-wallet with a LANG environment variable to force zec-qt-wallet to use that language</p>
-<pre><code>LANG=es ./zec-qt-wallet
-</code></pre>
+<div class="codehilite"><pre><span></span>LANG=es ./zec-qt-wallet
+</pre></div>
                 
                   
                 

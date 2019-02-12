@@ -688,7 +688,17 @@
                 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="the-zcashd-debug-log">The <code>zcashd</code> debug log<a class="headerlink" href="#the-zcashd-debug-log" title="Permanent link">&para;</a></h2>
-<p>The <code>debug.log</code> file is the first place to start for diagnosing issues.</p>
+<p>The <code>debug.log</code> file is the first place to start for troubleshooting issues. The file is located in the data directory and by default is located in the following locations:</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\Zcash\debug.log</code></li>
+<li>macOS: <code>~/Library/Application Support/Zcash/debug.log</code></li>
+<li>Linux: <code>~/.zcash/debug.log</code></li>
+</ul>
+<p>If you have specified a custom <code>datadir</code> option then the <code>debug.log</code> file will be located in that directory. Using a tool such as <code>tail</code> you can view the last 100 lines with the following command:</p>
+<div class="codehilite"><pre><span></span>tail -n <span class="m">100</span> ~/.zcash/debug.log
+</pre></div>
+
+
 <h2 id="my-node-isnt-syncing">My node isn&rsquo;t syncing<a class="headerlink" href="#my-node-isnt-syncing" title="Permanent link">&para;</a></h2>
 <h2 id="my-transaction-didnt-get-mined">My transaction didn&rsquo;t get mined<a class="headerlink" href="#my-transaction-didnt-get-mined" title="Permanent link">&para;</a></h2>
 <h2 id="how-to-perform-a-wallet-rescan">How to perform a wallet rescan<a class="headerlink" href="#how-to-perform-a-wallet-rescan" title="Permanent link">&para;</a></h2>

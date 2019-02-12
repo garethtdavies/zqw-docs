@@ -529,39 +529,42 @@
 <p>zec-qt-wallet is written in C++ 14, so you&rsquo;ll also need a modern C++ compiler like g++/clang++/visual c++ depending on your platform. </p>
 <h2 id="building-on-linux">Building on Linux<a class="headerlink" href="#building-on-linux" title="Permanent link">&para;</a></h2>
 <p>First install the pre-requisites</p>
-<pre><code>sudo apt install libgl1-mesa-dev
-</code></pre>
+<div class="codehilite"><pre><span></span>sudo apt install libgl1-mesa-dev
+</pre></div>
 
-<pre><code>git clone https://github.com/adityapk00/zec-qt-wallet.git
+
+<div class="codehilite"><pre><span></span>git clone https://github.com/adityapk00/zec-qt-wallet.git
 cd zec-qt-wallet
 /path/to/qt5/bin/qmake zec-qt-wallet.pro CONFIG+=debug
 make -j$(nproc)
 
 ./zec-qt-wallet
-</code></pre>
+</pre></div>
+
 
 <h2 id="building-on-windows">Building on Windows<a class="headerlink" href="#building-on-windows" title="Permanent link">&para;</a></h2>
 <p>You need Visual Studio 2017 (The free C++ Community Edition works just fine). Alternately, you can cross-compile on Linux for Windows using the mingw compiler. See <a href="wiki/Setting-up-a-build-environment">cross-compile instructions here</a>.</p>
 <p>From the VS Tools command prompt</p>
-<pre><code>git clone https://github.com/adityapk00/zec-qt-wallet.git
+<div class="codehilite"><pre><span></span>git clone https://github.com/adityapk00/zec-qt-wallet.git
 cd zec-qt-wallet
 c:\Qt5\bin\qmake.exe zec-qt-wallet.pro -spec win32-msvc CONFIG+=debug
 nmake
 
 debug\zec-qt-wallet.exe
-</code></pre>
+</pre></div>
+
 
 <p>To create the Visual Studio project files so you can compile and run from Visual Studio:
 <code>c:\Qt5\bin\qmake.exe zec-qt-wallet.pro -tp vc CONFIG+=debug</code></p>
 <h2 id="building-on-mac">Building on Mac<a class="headerlink" href="#building-on-mac" title="Permanent link">&para;</a></h2>
 <p>You need to install the XCode app or the XCode command line tools first, and then install Qt. </p>
-<pre><code>git clone https://github.com/adityapk00/zec-qt-wallet.git
+<div class="codehilite"><pre><span></span>git clone https://github.com/adityapk00/zec-qt-wallet.git
 cd zec-qt-wallet
 /path/to/qt5/bin/qmake zec-qt-wallet.pro CONFIG+=debug
 make 
 
 ./zec-qt-wallet.app/Contents/MacOS/zec-qt-wallet
-</code></pre>
+</pre></div>
                 
                   
                 
