@@ -84,6 +84,8 @@ zcash.conf is located in the [default data directory](#) and will be in this loc
 
 ### Can I use zec-qt-wallet with a hardware wallet?
 
+### Where can I find the Sapling HD seed?
+
 ### Can I import a Sapling HD seed
 
 ### Can I remove an address from the wallet?
