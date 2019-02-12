@@ -18,6 +18,25 @@ tail -n 100 ~/.zcash/debug.log
 
 ## My node isn't syncing
 
+If your node isn't syncing or is slow to sync, first check that you have connections to other nodes as you may have a network issue. zec-qt-wallet will display if you are connected via the application footer. 
+
+![zec-qt-wallet connections](/images/connections.png)
+
+You can also find this information in the **zcashd** tab on the main menu (if you are running the embedded `zcashd`) and it will list the number of connections to other peers which should be greater than 0. If you do not have any connections then check your internet connection, then check that the [ports required](/troubleshooting/#zcashd-ports) for `zcashd` are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.
+
+If you are still having issues, then look in the [debug log](/troubleshooting/#the-zcashd-debug-log) to identify any error messages.
+
+## zcashd ports
+
+By default `zcashd` runs on the following ports.
+
+* **8232** for mainnet RPC
+* **8233** for mainnet peer-to-peer network
+* **18232** for testnet RPC
+* **18233** for testnet peer-to-peer network
+
+You may override any of these values in `zcash.conf`.
+
 ## My transaction didn't get mined
 
 ## How to perform a wallet rescan
