@@ -96,6 +96,12 @@ By default `zcashd` does not store outgoing shielded transactions. To overcome t
 
 // TODO Status of Sprout addresses
 
+The use of Sapling addresses is discouraged and Sapling addresses should be used wherever possible. To speed up this process zec-qt-wallet disallows generating new Sprout addressess. If you have a need to do this you can do so simply by using the underlying `zcashd` instance via the following command and the new address will be displayed in zec-qt-wallet` as normal.
+
+``` bash
+zcash-cli getnewaddress sprout
+```
+
 ## Sending from Sprout address to Sapling gives error
 You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as it must pass through the turnstile. See the details on the [turnstile migration](/turnstile-migration) for details on how to move your funds from a Sprout address to a Sapling one in a privacy-preserving way.
 
