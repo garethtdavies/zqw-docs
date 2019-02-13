@@ -53,3 +53,5 @@ It is important to keep your version of zec-qt-wallet up to date as new features
 
 !!! warning "`zcashd` reaches end of service halt after 16 weeks"
     If you are using the embedded `zcashd` then after 16 weeks from release `zcashd` will reach an end of service halt and will shutdown. Simply update your version of `zec-qt-wallet` to continue. 
+
+zec-qt-wallet also has an update notifier that will notify you if there's a new release of zec-qt-wallet available.

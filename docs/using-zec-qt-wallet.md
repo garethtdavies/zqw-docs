@@ -26,20 +26,20 @@ Transparent addresses are automatically created when clicking the **t-Addr** but
 
 Optionally add a label to easily identify the address and add it to your address book. A QR code is also provided for the address which may be used to receive funds.
 
+zec-qt-wallet will also show if the address has been previously used.
+
 ## Sending a transaction
 
 Once you've generated an address and have sent some funds to it, you can send some ZEC. Click on the **Send** tab:
 
-![Send Tab](/images/semd.png)
+![Send Tab](/images/send.png)
 
 You can only send funds with at least one confirmation. While transactions are being confirmed they are easily identificable as they are highlighted in red.
 
 Choose an address with funds in it and enter the receipient address. You may specifify multiple recipients per transaction and there may be a mixture of transparent and shielded recipients. The Memo field is only available when sending **to** a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the Options section if you wish to customise this behviour and understand the implications.
 
 !!! note "Shielded send requirements"
-    Sending Sapling transaction requires only around 40Mb of memory and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 30 seconds and require 1.3GB of memory.
-
-// TODO send screen    
+    Sending Sapling transaction requires only around 40Mb of memory and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 30 seconds and require 1.3GB of memory. 
 
 ### Viewing transaction on explorer
 
@@ -49,9 +49,11 @@ This will open up the default block explorer of xxxx. If your transaction is a s
 
 ### Pay Zcash URI
 
-// TODO
+Now pay zcash URIs by selecting File -> Pay Zcash URI and pasting the payment URI.
 
-Paste in a Zcash URI.
+![Pay Zcash URI](/images/pay-zcash-uri.png)
+
+Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can copy-paste it into zec-qt-wallet and make payments easily.
 
 ## Address book
 
@@ -99,39 +101,62 @@ By default `zcashd` will not store information about your outgoing fully shielde
 
 ### Allow custom fees
 
-//TODO
+Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent it is highly recommended that you use the default fee for all transactions to make your transactions indistinguishable. 
 
 ### Shield change automatically to Sapling address
 
-//TODO
+Like Bitcoin when using transparent addresses change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the app [**Options**](#). As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.
 
 ### Connect via TOR
 
-//TODO
+When using Zcash it does nothing to preserve your network level privacy so a unique IP address can allow network observers to correlate your Zcash transactions with each other abd with your other traffic.
+
+To overcome this you may use TOR to obsfucate your IP address.
+
+https://z.cash/support/security/privacy-security-recommendations
+
+
+#### Onion Nodes
+
+// TODO list of onion nodes
 
 ## Encrypted Memo field
 
 //TODO
 
+https://z.cash/blog/encrypted-memo-field/
+
 ### Including a reply address
 
 //TODO
 
+![Memo reply to address](/images/memo-reply-address.png)
+
 ### Replying to a memo
 
-//TODO
+If you receive a transaction with a memo that contains a reply-to address, you can now reply to it right from the transactions table. Just right click -> Reply To to compose a reply!
+
+![Reply to a memo](/images/memo-reply-to.png)
 
 ## Exporting transactions
 
-//TODO
+zec-qt-wallet allows you to export all transactions via the **File->Export Transactions** menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: Type	Address	Date/Time	Amount	Memo
 
 ## Apps
 
-//TODO
+zec-qt-wallet bundles some aplications to make common tasks simpler.
 
 ### Using z-board.net
 
 //TODO
+
+z-board.net is 
+
+z-board.net now comes with support for topics, in addition to posting to the main boardzboard
+
+http://z-board.net/
+
+![zboard](/images/zboard.png)
 
 ### Turnstile migration
 
@@ -147,4 +172,18 @@ The `zcash.conf` file may be used to customise how the `zcashd` software behaves
 
 ## Connecting to an external `zcashd`
 
-//TODO
+!!! danger "Exposing "
+    Using the RPC port over a remote interface is NOT RECOMMENDED, because
+    that will cause the rpcpassword to be transmitted over the network
+    unencrypted, allowing any observer to steal your keys + Zcash and take
+    over the OS account running zcashd.
+
+If you want to connect to a remote zcashd, follow the following steps:
+
+* start zec-qt-wallet with -no-embedded to prevent the embedded zcashd from starting
+* Go to Edit->Settings and set the remote node's host/post and rpc username/password
+* Make sure the zcashd on remote node is listening on all interfaces, and not just the localhost interface
+
+Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding (ssh -L8232:127.0.0.1:8232 user@remotehost) and set zec-qt-wallet to connect to localhost:8232
+
+By default, only RPC connections from localhost are allowed.

@@ -26,3 +26,5 @@ zec-qt-wallet can migrate your Sprout funds to a Sapling address in a privacy pr
     If you shut down the wallet then it'll send on reopening. You *will* need the wallet to be open in order for any transactions to be sent.
 
 Steps...
+
+You may only perform one migration at a time using the app.

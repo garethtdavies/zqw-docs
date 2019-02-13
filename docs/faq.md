@@ -7,6 +7,8 @@
 
 zec-qt-wallet is available to download from the [Zcash Foundation Github repository](https://github.com/ZcashFoundation/zec-qt-wallet). The [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) lists the latest available downloads for each platform.
 
+The Android application which is still in beta may be downloaded from ... (link to app page)
+
 ### Which installer should I download?
 
 See the [installation](/installation/#download-and-install) section for more details for your platform.
@@ -27,10 +29,10 @@ Currently the blockchain data directory is around 25GB (Feb, 2019) and will cont
 
 ### Can I move the data directory?
 
-If you are starting zec-qt-wallet for the first time then you can choose the advanced configuration and select the location of your data directory, which may for example be on a seperate disk. If you have an existing data directory you would like to move, you can achieve this through the following steps:
+If you are starting zec-qt-wallet for the first time then you can choose the advanced configuration (image of this) and select the location of your data directory, which may for example be on a seperate disk. If you have an existing data directory you would like to move, you can achieve this through the following steps:
 
 * Create the new directory
-* Copy your [existing data directory](#) to the new location
+* Copy everything in your [existing data directory](#) to the new location
 * Update [zcash.conf](#) with the `datadir=/your/new/path`
 * Restart zec-qt-wallet
 
@@ -54,23 +56,19 @@ No, Zcash requires that you have at least 1 confirmation before sending. Trying 
 
 ### Can I use a custom fee?
 
-Yes, but here's why you shouldn't...
+Yes, though it is adviced to use the default 0.0001 fee to prevent your transactions from being distinguishable you may override this behaviour in the app [**Options**](#).
 
-### Why does my change go to a new address?
+# What's the difference between transparent, Sprout and Sapling addresses?
 
-Like Bitcoin ...
+Transparent addresses start with a **t** prefix and are transparent like Bitcoin and offer no privacy properties. Sprout addressess have a **zc** prefix and are the first generation of shielded addresses. Sprout addresses have been superseeded by Sapling address which have a **zs** prefix. While Sprout addresses may still be used it is recommended to use Sapling addresses due to the massive performance improvements (link). To move funds between Sprout and Sapling addresses see the turnstile (link).
+
+For more information on the use of addresses in Zcash [see this page](https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html).
 
 ### How long does a Sapling transaction take?
 
 Sapling greatly reduced the time taken to perform proofs down to just a few seconds. Sprout transactions take around 70-90 seconds and is dependent on hardware and the number of JoinSplits.
 
-### Can I have my change automatically shielded to a Sapling address?
-
-### Can I remove shielded transactions sends from persisting in the wallet?
-
-### Will zec-qt wallet remember my outgoing shielded sends?
-
-Yes, by default zec-qt-wallet will store shielded sends in a local database as `zcashd` does not provide this information. You caan override this behaviour in the [Options](#) setting and can remove any stored transactions at any time (note that these will not be recoverable if you delete them).
+https://z.cash/blog/reducing-shielded-proving-time-in-sapling/
 
 ## zcashd node
 
@@ -101,7 +99,7 @@ testnet=1
 
 ### Does zec-qt-wallet support selective disclosure?
 
-Not yet. While s[elective disclosure](#) works on Sprout addresses it has not yet been updated in `zcashd` to support Sapling addresses.
+Not yet. While [selective disclosure](https://z.cash/blog/viewing-keys-selective-disclosure/) works on Sprout addresses it has not yet been updated in `zcashd` to support Sapling addresses.
 
 ### Does zec-qt-wallet support viewing keys?
 
@@ -112,6 +110,18 @@ Not yet. While s[elective disclosure](#) works on Sprout addresses it has not ye
 ### Is the wallet encrypted?
 
 No wallet encryption is [currently disabled](#) by `zcashd`. Users are advised to use full disk encyption or to manually encrpyt/decrypt their `wallet.dat` files when not using the software.
+
+### Why does my change go to a new address?
+
+Like Bitcoin when using transparent addresses change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the app [**Options**](#). As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.
+
+### Will zec-qt wallet remember my outgoing shielded sends?
+
+Yes, by default zec-qt-wallet will store shielded sends in a local database as `zcashd` does not provide this information. You caan override this behaviour in the [Options](#) setting and can remove any stored transactions at any time (note that these will not be recoverable if you delete them).
+
+### Can I remove shielded transactions sends from persisting in the wallet?
+
+Yes, simply click the **Clear History** button in the **Options**. Note that if you do this you will not later be able to recover these sends.
 
 ### How do I read a memo?
 
@@ -129,11 +139,13 @@ No, addresses cannot be removed from the wallet. It is advised that you export t
 
 ### Seed phrases
 
-#### Does zec-qt-wallet have a 12 word seed
+#### Can zec-qt-wallet export a 12/18/24 word seed
+
+No, `zcashd` does not support BIP xxx. Sapling does use a HD wallet xxx https://z.cash/blog/sapling-in-hd/
 
 #### Where can I find the Sapling HD seed?
 
-#### Can I export a seed phrase?
+https://z.cash/blog/sapling-in-hd/
 
 In zcashd only Sapling addresses are HD compatible. There is a Sapling master seed but this is currently not accessible to the zec-qt-wallet. To get this seed you need to run the following command via the zcashd CLI. `zcash-cli z_exportwallet` having set an export path in your `zcash.conf`. The Sapling seed will be displayed at the top of the file in the format...
 
@@ -143,14 +155,21 @@ It should be noted that it is currently not possible to _import_ the seed to zca
 
 ### Can I mine with zec-qt-wallet?
 
-No, zec-qt-wallet is a wallet and full node. while you can configure zcashd to run the inbuilt CPU miner this isn't practical to run on mainnet and you need alternative hardware and software to run. See this page for more information on mining.
+No, zec-qt-wallet is a wallet and full node. while you can configure zcashd to run the inbuilt CPU miner this isn't practical to run on mainnet and you need alternative hardware and software to run. See this page for more information on mining https://www.zcashcommunity.com/mining/
 
 ## WinZEC
 
 ### How do I upgrade from WinZEC?
 
-WinZEC has now been deprecated. You can simply install zec-qt-wallet and it'll use the data directory and wallet from WinZEC and all your funds will be available.  
+TLDR just install zec-qt-wallet and it'll work.
+WinZEC has now been deprecated. You can simply install zec-qt-wallet and it'll use the existing data directory and wallet from WinZEC and operate as normal.   
 
 ### Can I import WinZEC address book?
 
-Yes, simply brose to the location of the address book file (xxxxxx)
+Yes, simply browse to the location of the address book file. By default this will be `%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv` where `%/HOMEPATH%` is typically `C:\Users\YourUsername\` and you may need to enable viewing hidden files to browse to the `AppData` folder location.
+
+![Import address book](import-address-book.png)
+
+## what languages is zec-qt-wallet available in
+
+Currently it is available in xxx. If you want to help by translating see the [translations page](#)
