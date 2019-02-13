@@ -763,6 +763,11 @@
 <p>By default <code>zcashd</code> does not store outgoing shielded transactions. To overcome this zec-qt-wallet will store shielded sends locally and this option may be disabled and any transactions cleared. If you are missing any outgoing shielded transactions check that the option to <strong>Remember shielded transactions</strong> is selected in the <a href="#">wallet options</a>. There is no way (currently) of recoving the information about outgoping fully shielded spends if this option is disabled.</p>
 <h2 id="i-cant-generate-a-new-sprout-address">I can&rsquo;t generate a new Sprout address<a class="headerlink" href="#i-cant-generate-a-new-sprout-address" title="Permanent link">&para;</a></h2>
 <p>// TODO Status of Sprout addresses</p>
+<p>The use of Sapling addresses is discouraged and Sapling addresses should be used wherever possible. To speed up this process zec-qt-wallet disallows generating new Sprout addressess. If you have a need to do this you can do so simply by using the underlying <code>zcashd</code> instance via the following command and the new address will be displayed in zec-qt-wallet` as normal.</p>
+<div class="codehilite"><pre><span></span>zcash-cli getnewaddress sprout
+</pre></div>
+
+
 <h2 id="sending-from-sprout-address-to-sapling-gives-error">Sending from Sprout address to Sapling gives error<a class="headerlink" href="#sending-from-sprout-address-to-sapling-gives-error" title="Permanent link">&para;</a></h2>
 <p>You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as it must pass through the turnstile. See the details on the <a href="/turnstile-migration">turnstile migration</a> for details on how to move your funds from a Sprout address to a Sapling one in a privacy-preserving way.</p>
 <h2 id="my-issue-isnt-resolved">My issue isn&rsquo;t resolved<a class="headerlink" href="#my-issue-isnt-resolved" title="Permanent link">&para;</a></h2>

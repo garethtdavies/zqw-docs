@@ -476,6 +476,19 @@
     Connect via TOR
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onion-nodes" title="Onion Nodes" class="md-nav__link">
+    Onion Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -772,6 +785,19 @@
     Connect via TOR
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onion-nodes" title="Onion Nodes" class="md-nav__link">
+    Onion Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -895,22 +921,23 @@
 <p><img alt="Addresses Tab" src="/images/addresses.png" />    </p>
 <p>Transparent addresses are automatically created when clicking the <strong>t-Addr</strong> button as transparent addressess should not be reused. Unlike transparent addresses it is fine to reuse shielded addresses and so new addresses can be manually created via the <strong>New Address</strong> button.</p>
 <p>Optionally add a label to easily identify the address and add it to your address book. A QR code is also provided for the address which may be used to receive funds.</p>
+<p>zec-qt-wallet will also show if the address has been previously used.</p>
 <h2 id="sending-a-transaction">Sending a transaction<a class="headerlink" href="#sending-a-transaction" title="Permanent link">&para;</a></h2>
 <p>Once you&rsquo;ve generated an address and have sent some funds to it, you can send some ZEC. Click on the <strong>Send</strong> tab:</p>
-<p><img alt="Send Tab" src="/images/semd.png" /></p>
+<p><img alt="Send Tab" src="/images/send.png" /></p>
 <p>You can only send funds with at least one confirmation. While transactions are being confirmed they are easily identificable as they are highlighted in red.</p>
 <p>Choose an address with funds in it and enter the receipient address. You may specifify multiple recipients per transaction and there may be a mixture of transparent and shielded recipients. The Memo field is only available when sending <strong>to</strong> a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the Options section if you wish to customise this behviour and understand the implications.</p>
 <div class="admonition note">
 <p class="admonition-title">Shielded send requirements</p>
-<p>Sending Sapling transaction requires only around 40Mb of memory and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 30 seconds and require 1.3GB of memory.</p>
+<p>Sending Sapling transaction requires only around 40Mb of memory and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 30 seconds and require 1.3GB of memory. </p>
 </div>
-<p>// TODO send screen    </p>
 <h3 id="viewing-transaction-on-explorer">Viewing transaction on explorer<a class="headerlink" href="#viewing-transaction-on-explorer" title="Permanent link">&para;</a></h3>
 <p>Once complete, the txid will be displayed. Right click to bring up a menu to view on the block explorer. Alternitavely for any transactions on the <strong>Transactions</strong> tab right click and choose &ldquo;View on block explorer&rdquo;.</p>
 <p>This will open up the default block explorer of xxxx. If your transaction is a shielded one there will not be any public information available except the mining fee (as in the example transaction above). Once the funds are confirming any values will be highlighted in red until they receive one confirmation and will not be spendable until they have had one confirmation.</p>
 <h3 id="pay-zcash-uri">Pay Zcash URI<a class="headerlink" href="#pay-zcash-uri" title="Permanent link">&para;</a></h3>
-<p>// TODO</p>
-<p>Paste in a Zcash URI.</p>
+<p>Now pay zcash URIs by selecting File -&gt; Pay Zcash URI and pasting the payment URI.</p>
+<p><img alt="Pay Zcash URI" src="/images/pay-zcash-uri.png" /></p>
+<p>Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can copy-paste it into zec-qt-wallet and make payments easily.</p>
 <h2 id="address-book">Address book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
 <p>The address book makes managing addresses and labels simple. Either select <strong>Address Book</strong> in the application menu or select the button on the <strong>Send</strong> tab. You can import an address book in csv format?</p>
 <h2 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">&para;</a></h2>
@@ -939,23 +966,34 @@
 <h3 id="remember-shielded-transactions">Remember shielded transactions<a class="headerlink" href="#remember-shielded-transactions" title="Permanent link">&para;</a></h3>
 <p>By default <code>zcashd</code> will not store information about your outgoing fully shielded transactions. By default zec-qt-wallet will store outgoing transactions in an local database so that any shielded spends will appear on the transactions tab. If you do not wish these transactions to be stored by zec-qt-wallet simply toggle the option for &ldquo;Remember shielded transactions&rdquo;. At any point you may clear your shielded transaction history locally (there is no way of recovering this data).</p>
 <h3 id="allow-custom-fees">Allow custom fees<a class="headerlink" href="#allow-custom-fees" title="Permanent link">&para;</a></h3>
-<p>//TODO</p>
+<p>Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent it is highly recommended that you use the default fee for all transactions to make your transactions indistinguishable. </p>
 <h3 id="shield-change-automatically-to-sapling-address">Shield change automatically to Sapling address<a class="headerlink" href="#shield-change-automatically-to-sapling-address" title="Permanent link">&para;</a></h3>
-<p>//TODO</p>
+<p>Like Bitcoin when using transparent addresses change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the app <a href="#"><strong>Options</strong></a>. As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.</p>
 <h3 id="connect-via-tor">Connect via TOR<a class="headerlink" href="#connect-via-tor" title="Permanent link">&para;</a></h3>
-<p>//TODO</p>
+<p>When using Zcash it does nothing to preserve your network level privacy so a unique IP address can allow network observers to correlate your Zcash transactions with each other abd with your other traffic.</p>
+<p>To overcome this you may use TOR to obsfucate your IP address.</p>
+<p>https://z.cash/support/security/privacy-security-recommendations</p>
+<h4 id="onion-nodes">Onion Nodes<a class="headerlink" href="#onion-nodes" title="Permanent link">&para;</a></h4>
+<p>// TODO list of onion nodes</p>
 <h2 id="encrypted-memo-field">Encrypted Memo field<a class="headerlink" href="#encrypted-memo-field" title="Permanent link">&para;</a></h2>
 <p>//TODO</p>
+<p>https://z.cash/blog/encrypted-memo-field/</p>
 <h3 id="including-a-reply-address">Including a reply address<a class="headerlink" href="#including-a-reply-address" title="Permanent link">&para;</a></h3>
 <p>//TODO</p>
+<p><img alt="Memo reply to address" src="/images/memo-reply-address.png" /></p>
 <h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
-<p>//TODO</p>
+<p>If you receive a transaction with a memo that contains a reply-to address, you can now reply to it right from the transactions table. Just right click -&gt; Reply To to compose a reply!</p>
+<p><img alt="Reply to a memo" src="/images/memo-reply-to.png" /></p>
 <h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
-<p>//TODO</p>
+<p>zec-qt-wallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: Type  Address Date/Time   Amount  Memo</p>
 <h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
-<p>//TODO</p>
+<p>zec-qt-wallet bundles some aplications to make common tasks simpler.</p>
 <h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
 <p>//TODO</p>
+<p>z-board.net is </p>
+<p>z-board.net now comes with support for topics, in addition to posting to the main boardzboard</p>
+<p>http://z-board.net/</p>
+<p><img alt="zboard" src="/images/zboard.png" /></p>
 <h3 id="turnstile-migration">Turnstile migration<a class="headerlink" href="#turnstile-migration" title="Permanent link">&para;</a></h3>
 <p>See the <a href="#turnstile-migration">page on the turnstile migration</a> for full details.</p>
 <h2 id="customising-zcashconf">Customising <code>zcash.conf</code><a class="headerlink" href="#customising-zcashconf" title="Permanent link">&para;</a></h2>
@@ -966,7 +1004,21 @@
 <li>Linux: <code>~/.zcash/zcash.conf</code></li>
 </ul>
 <h2 id="connecting-to-an-external-zcashd">Connecting to an external <code>zcashd</code><a class="headerlink" href="#connecting-to-an-external-zcashd" title="Permanent link">&para;</a></h2>
-<p>//TODO</p>
+<div class="admonition danger">
+<p class="admonition-title">Exposing </p>
+<p>Using the RPC port over a remote interface is NOT RECOMMENDED, because
+that will cause the rpcpassword to be transmitted over the network
+unencrypted, allowing any observer to steal your keys + Zcash and take
+over the OS account running zcashd.</p>
+</div>
+<p>If you want to connect to a remote zcashd, follow the following steps:</p>
+<ul>
+<li>start zec-qt-wallet with -no-embedded to prevent the embedded zcashd from starting</li>
+<li>Go to Edit-&gt;Settings and set the remote node&rsquo;s host/post and rpc username/password</li>
+<li>Make sure the zcashd on remote node is listening on all interfaces, and not just the localhost interface</li>
+</ul>
+<p>Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding (ssh -L8232:127.0.0.1:8232 user@remotehost) and set zec-qt-wallet to connect to localhost:8232</p>
+<p>By default, only RPC connections from localhost are allowed.</p>
                 
                   
                 
