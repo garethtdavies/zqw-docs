@@ -1,4 +1,4 @@
-# Welcome to the zec-qt-wallet Docs
+# zec-qt-wallet Documentation
 
 ---
 
