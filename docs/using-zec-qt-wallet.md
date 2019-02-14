@@ -115,26 +115,60 @@ To overcome this you may use TOR to obsfucate your IP address.
 
 https://z.cash/support/security/privacy-security-recommendations
 
+Download TOR Expert Bundle (not TOR browser) from the [official site](https://www.torproject.org/download/download.html).
 
 #### Onion Nodes
 
-// TODO list of onion nodes
+You can connect to Zcash nodes only behind onion addresses by adding the following into your `zcash.conf` file:
+
+```
+proxy=127.0.0.1:9050
+onlynet=onion
+```
+
+Then providing a list of onion nodes. // TODO clarify updates to this list
+
+```
+addnode=zcmaintvsivr7pcn.onion
+addnode=zcashiqykswlzpsu.onion
+addnode=zcashqhrmju6zfhn.onion
+addnode=zcashgmvxwrmjsut.onion
+addnode=zcashz3uma65ix7b.onion
+addnode=zcashiyf4kxluf3x.onion
+addnode=zcashwfe4x3jkz2b.onion
+addnode=zcashvkeki52iqpc.onion
+addnode=zcasha3cmfrpy7b7.onion
+addnode=zcashz7ed3nvbdxm.onion
+addnode=zcash5adwfpxfuvf.onion
+addnode=zcashixg5ol2ndo4.onion
+addnode=zcashuzwa365oh3n.onion
+addnode=zcashskbeoiwtym3.onion
+addnode=zcashuyvk5e7qfzy.onion
+addnode=fhsxfrwpyrtoxeal.onion
+addnode=zcash2iihed2wdux.onion
+addnode=w3dxku36wbp3lowx.onion
+addnode=zcashuhmzycmlwld.onion
+```
+
+`onlynet=onion` is only used when you want want to force connection just with `.onion` Tor hidden services and avoid leaks to clearnet IP addresses.
 
 ## Encrypted Memo field
 
-//TODO
+The encypted memo field allows a user to include an optional memo of up to 512 bytes in their transaction. As the transaction is encrypted on the blockchain only the recipient of the transaction can read the memo. This could, for example, be used to include information about the sender for a purchase or a refund address and there is more detail about potential usage of this field in this [blog post](https://z.cash/blog/encrypted-memo-field/).
 
-https://z.cash/blog/encrypted-memo-field/
+You can only include a memo when sending **to** a shielded address. To include a memo in a transacion simply click the **Memo** button and it will provide a textbox allow you to enter 512 characters. 
+
+![Memo](/images/send-memo.png)
 
 ### Including a reply address
 
-//TODO
+If you want to send a reply to address in the memo field for example if you are using the memo field as an encrypted chat application the zec-qt-wallet allows you to include a reply address in a standard format. To use, simply press the **Include Reply Address** and the sending address will automatically be inserted.
 
 ![Memo reply to address](/images/memo-reply-address.png)
 
 ### Replying to a memo
 
-If you receive a transaction with a memo that contains a reply-to address, you can now reply to it right from the transactions table. Just right click -> Reply To to compose a reply!
+If you receive a transaction with a memo that contains a [reply address](#), you can now reply to it from the transactions table. Simply right click the transaction and choose **Reply to xxx**.
 
 ![Reply to a memo](/images/memo-reply-to.png)
 
@@ -148,13 +182,7 @@ zec-qt-wallet bundles some aplications to make common tasks simpler.
 
 ### Using z-board.net
 
-//TODO
-
-z-board.net is 
-
-z-board.net now comes with support for topics, in addition to posting to the main boardzboard
-
-http://z-board.net/
+[z-board.net](http://z-board.net/) is a message board based on the encrypted memo field. When using shielded addresses messages are anonymous. zec-qt-wallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address.
 
 ![zboard](/images/zboard.png)
 
