@@ -109,24 +109,29 @@ Like Bitcoin when using transparent addresses change from a transaction goes to 
 
 ### Connect via TOR
 
-When using Zcash it does nothing to preserve your network level privacy so a unique IP address can allow network observers to correlate your Zcash transactions with each other abd with your other traffic.
+When using Zcash [it does nothing to preserve your network level privacy](https://z.cash/support/security/privacy-security-recommendations) so a unique IP address can allow network observers to correlate your Zcash transactions with each other and with your other traffic. To overcome this you may use TOR to obsfucate your IP address.
 
-To overcome this you may use TOR to obsfucate your IP address.
+You will first need to have TOR installed which you may do from the [official site](https://www.torproject.org/download/download.html). You will need to download and run the TOR Expert Bundle (not TOR browser). TOR is also available on all popular package managers e.g. macOS `brew install tor` or Debian `apt install tor`.
 
-https://z.cash/support/security/privacy-security-recommendations
+Once running simply choose the option in zec-qt-wallet to **Connect via TOR** and the following line will be added to your `zcash.conf` file to configure TOR usage `proxy=127.0.0.1:9050`. Restart `zcashd`  to enable the service running over TOR.
 
-Download TOR Expert Bundle (not TOR browser) from the [official site](https://www.torproject.org/download/download.html).
+Use the advanced options when installing zec-qt-wallet to run `zcashd` over TOR from the first time so your IP is never exposed to the network.
+
+!!! warning "Parameters are not currently downloaded over TOR"
+    As per this [issue](https://github.com/ZcashFoundation/zec-qt-wallet/issues/97) the Zcash parameters that are downloaded on the first launch are not done so over TOR. 
+
 
 #### Onion Nodes
 
 You can connect to Zcash nodes only behind onion addresses by adding the following into your `zcash.conf` file:
+Tor to ensure that your IP address is not exposed to any Zcash-related services when installing, running, and updating a Zcash full node (zcashd)
 
 ```
 proxy=127.0.0.1:9050
 onlynet=onion
 ```
 
-Then providing a list of onion nodes. // TODO clarify updates to this list
+Then provide a list of onion nodes. A sample list is provided below but these may change over time.
 
 ```
 addnode=zcmaintvsivr7pcn.onion
