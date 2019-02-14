@@ -973,26 +973,54 @@
 <p>When using Zcash it does nothing to preserve your network level privacy so a unique IP address can allow network observers to correlate your Zcash transactions with each other abd with your other traffic.</p>
 <p>To overcome this you may use TOR to obsfucate your IP address.</p>
 <p>https://z.cash/support/security/privacy-security-recommendations</p>
+<p>Download TOR Expert Bundle (not TOR browser) from the <a href="https://www.torproject.org/download/download.html">official site</a>.</p>
 <h4 id="onion-nodes">Onion Nodes<a class="headerlink" href="#onion-nodes" title="Permanent link">&para;</a></h4>
-<p>// TODO list of onion nodes</p>
+<p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <code>zcash.conf</code> file:</p>
+<div class="codehilite"><pre><span></span>proxy=127.0.0.1:9050
+onlynet=onion
+</pre></div>
+
+
+<p>Then providing a list of onion nodes. // TODO clarify updates to this list</p>
+<div class="codehilite"><pre><span></span>addnode=zcmaintvsivr7pcn.onion
+addnode=zcashiqykswlzpsu.onion
+addnode=zcashqhrmju6zfhn.onion
+addnode=zcashgmvxwrmjsut.onion
+addnode=zcashz3uma65ix7b.onion
+addnode=zcashiyf4kxluf3x.onion
+addnode=zcashwfe4x3jkz2b.onion
+addnode=zcashvkeki52iqpc.onion
+addnode=zcasha3cmfrpy7b7.onion
+addnode=zcashz7ed3nvbdxm.onion
+addnode=zcash5adwfpxfuvf.onion
+addnode=zcashixg5ol2ndo4.onion
+addnode=zcashuzwa365oh3n.onion
+addnode=zcashskbeoiwtym3.onion
+addnode=zcashuyvk5e7qfzy.onion
+addnode=fhsxfrwpyrtoxeal.onion
+addnode=zcash2iihed2wdux.onion
+addnode=w3dxku36wbp3lowx.onion
+addnode=zcashuhmzycmlwld.onion
+</pre></div>
+
+
+<p><code>onlynet=onion</code> is only used when you want want to force connection just with <code>.onion</code> Tor hidden services and avoid leaks to clearnet IP addresses.</p>
 <h2 id="encrypted-memo-field">Encrypted Memo field<a class="headerlink" href="#encrypted-memo-field" title="Permanent link">&para;</a></h2>
-<p>//TODO</p>
-<p>https://z.cash/blog/encrypted-memo-field/</p>
+<p>The encypted memo field allows a user to include an optional memo of up to 512 bytes in their transaction. As the transaction is encrypted on the blockchain only the recipient of the transaction can read the memo. This could, for example, be used to include information about the sender for a purchase or a refund address and there is more detail about potential usage of this field in this <a href="https://z.cash/blog/encrypted-memo-field/">blog post</a>.</p>
+<p>You can only include a memo when sending <strong>to</strong> a shielded address. To include a memo in a transacion simply click the <strong>Memo</strong> button and it will provide a textbox allow you to enter 512 characters. </p>
+<p><img alt="Memo" src="/images/send-memo.png" /></p>
 <h3 id="including-a-reply-address">Including a reply address<a class="headerlink" href="#including-a-reply-address" title="Permanent link">&para;</a></h3>
-<p>//TODO</p>
+<p>If you want to send a reply to address in the memo field for example if you are using the memo field as an encrypted chat application the zec-qt-wallet allows you to include a reply address in a standard format. To use, simply press the <strong>Include Reply Address</strong> and the sending address will automatically be inserted.</p>
 <p><img alt="Memo reply to address" src="/images/memo-reply-address.png" /></p>
 <h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
-<p>If you receive a transaction with a memo that contains a reply-to address, you can now reply to it right from the transactions table. Just right click -&gt; Reply To to compose a reply!</p>
+<p>If you receive a transaction with a memo that contains a <a href="#">reply address</a>, you can now reply to it from the transactions table. Simply right click the transaction and choose <strong>Reply to xxx</strong>.</p>
 <p><img alt="Reply to a memo" src="/images/memo-reply-to.png" /></p>
 <h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: Type  Address Date/Time   Amount  Memo</p>
 <h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet bundles some aplications to make common tasks simpler.</p>
 <h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
-<p>//TODO</p>
-<p>z-board.net is </p>
-<p>z-board.net now comes with support for topics, in addition to posting to the main boardzboard</p>
-<p>http://z-board.net/</p>
+<p><a href="http://z-board.net/">z-board.net</a> is a message board based on the encrypted memo field. When using shielded addresses messages are anonymous. zec-qt-wallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address.</p>
 <p><img alt="zboard" src="/images/zboard.png" /></p>
 <h3 id="turnstile-migration">Turnstile migration<a class="headerlink" href="#turnstile-migration" title="Permanent link">&para;</a></h3>
 <p>See the <a href="#turnstile-migration">page on the turnstile migration</a> for full details.</p>

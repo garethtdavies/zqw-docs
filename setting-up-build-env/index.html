@@ -676,86 +676,86 @@
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
 <h3 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h3>
 <p>It&rsquo;s best to set up a build environment on Ubuntu 16.04. It brings the right versions of libc and libstdc++ that ensures maximum compatibility. You can build on newer versions of Linux distros, but binaries compiled on these platforms may not work on older versions.</p>
-<div class="codehilite"><pre><span></span># build dependencies
+<div class="codehilite"><pre><span></span><span class="c1"># build dependencies</span>
 sudo apt install clang g++ build-essential make mingw-w64 git pkg-config libc6-dev m4 g++-multilib autoconf libtool-bin ncurses-dev unzip python python-zmq zlib1g-dev wget curl bsdmainutils automake libgl1-mesa-dev libglu1-mesa-dev libfontconfig1-dev autopoint libssl-dev
 
-# MXE dependencies
+<span class="c1"># MXE dependencies</span>
 sudo apt install bash bison bzip2 flex  gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev  libtool-bin libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby sed unzip wget xz-utils
 </pre></div>
 
 
 <h3 id="compile-openssl">Compile OpenSSL<a class="headerlink" href="#compile-openssl" title="Permanent link">&para;</a></h3>
-<p>You need to compile a static version of OpenSSL, which is passed to the Qt5 configuration script</p>
-<div class="codehilite"><pre><span></span># Download openssl 1.0.2
+<p>You need to compile a static version of OpenSSL, which is passed to the Qt5 configuration script.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Download openssl 1.0.2</span>
 ./Configure linux-x86_64
 make
 </pre></div>
 
 
 <h3 id="static-build-of-qt5">Static build of Qt5<a class="headerlink" href="#static-build-of-qt5" title="Permanent link">&para;</a></h3>
-<p>Download Qt5 Sources</p>
-<div class="codehilite"><pre><span></span>mkdir -p ~/Qt/5.11.2 &amp;&amp; cd ~/Qt/5.11.2
+<p>Download Qt5 sources</p>
+<div class="codehilite"><pre><span></span>mkdir -p ~/Qt/5.11.2 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/Qt/5.11.2
 
 wget https://download.qt.io/archive/qt/5.11/5.11.2/single/qt-everywhere-src-5.11.2.tar.xz
-tar xvf qt-everywhere-src-5.11.2.tar.xz &amp;&amp; cd qt-everywhere-src-5.11.2
+tar xvf qt-everywhere-src-5.11.2.tar.xz <span class="o">&amp;&amp;</span> <span class="nb">cd</span> qt-everywhere-src-5.11.2
 </pre></div>
 
 
 <p>Configure and build Qt5 statically</p>
-<div class="codehilite"><pre><span></span>OPENSSL_LIBS=&#39;-L/path/to/openssl-1.0.2q -lssl -lcrypto&#39; ./configure -static -prefix ~/Qt/5.11.2/static  -skip qtlocation -skip qtmacextras -skip qtpurchasing -skip qtscript -skip qtsensors -skip qtserialbus -skip qtserialport -skip qtspeech -skip qtdatavis3d -skip qtdoc -skip qtcharts -skip qtdeclarative -skip qt3d -skip qtwebengine -skip qtandroidextras -skip qtwebview -skip qtgamepad -skip qtquickcontrols -skip qtquickcontrols2 -skip qtremoteobjects -skip qtwebview -skip qtwebchannel -skip qtwebglplugin  -nomake examples -nomake tests -qt-zlib -qt-libpng -qt-xcb -qt-xkbcommon -feature-fontconfig -no-feature-getentropy  -release -openssl-linked -opensource
+<div class="codehilite"><pre><span></span><span class="nv">OPENSSL_LIBS</span><span class="o">=</span><span class="s1">&#39;-L/path/to/openssl-1.0.2q -lssl -lcrypto&#39;</span> ./configure -static -prefix ~/Qt/5.11.2/static  -skip qtlocation -skip qtmacextras -skip qtpurchasing -skip qtscript -skip qtsensors -skip qtserialbus -skip qtserialport -skip qtspeech -skip qtdatavis3d -skip qtdoc -skip qtcharts -skip qtdeclarative -skip qt3d -skip qtwebengine -skip qtandroidextras -skip qtwebview -skip qtgamepad -skip qtquickcontrols -skip qtquickcontrols2 -skip qtremoteobjects -skip qtwebview -skip qtwebchannel -skip qtwebglplugin  -nomake examples -nomake tests -qt-zlib -qt-libpng -qt-xcb -qt-xkbcommon -feature-fontconfig -no-feature-getentropy  -release -openssl-linked -opensource
 
-make -j$(nproc)
-make -j$(nproc) install
+make -j<span class="k">$(</span>nproc<span class="k">)</span>
+make -j<span class="k">$(</span>nproc<span class="k">)</span> install
 </pre></div>
 
 
 <h3 id="build-mxe-cross-compiled-qt5-for-windows-in-linux">Build MXE (Cross-compiled Qt5 for Windows in Linux)<a class="headerlink" href="#build-mxe-cross-compiled-qt5-for-windows-in-linux" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>mkdir ~/github &amp;&amp; cd ~/github
+<div class="codehilite"><pre><span></span>mkdir ~/github <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/github
 git clone https://github.com/mxe/mxe.git
-cd mxe
+<span class="nb">cd</span> mxe
 
-make -j$(nproc) MXE_TARGETS=x86_64-w64-mingw32.static qtbase qtwebsockets
+make -j<span class="k">$(</span>nproc<span class="k">)</span> <span class="nv">MXE_TARGETS</span><span class="o">=</span>x86_64-w64-mingw32.static qtbase qtwebsockets
 </pre></div>
 
 
 <h3 id="build-zec-qt-wallet">Build zec-qt-wallet<a class="headerlink" href="#build-zec-qt-wallet" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>git clone git@github.com:adityapk00/zec-qt-wallet.git
-~/Qt/5.11.2/static/bin/qmake zec-qt-wallet.pro CONFIG+=debug-spec linux-clang
+~/Qt/5.11.2/static/bin/qmake zec-qt-wallet.pro <span class="nv">CONFIG</span><span class="o">+=</span>debug-spec linux-clang
 
-make -j$(nproc)
+make -j<span class="k">$(</span>nproc<span class="k">)</span>
 </pre></div>
 
 
 <h3 id="compiling-zcashd-for-embedded-zcashd">Compiling zcashd for embedded zcashd<a class="headerlink" href="#compiling-zcashd-for-embedded-zcashd" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>git clone git@github.com:adityapk00/zcash zcash-linux
 git clone git@github.com:adityapk00/zcash zcash-win
-mkdir -p ~/zcash/artifacts # Built zcashd goes here.
+mkdir -p ~/zcash/artifacts <span class="c1"># Built zcashd goes here.</span>
 </pre></div>
 
 
-<p>Note that we create two separate folders, because we&rsquo;re going to compile zcashd for windows and linux. </p>
-<p><em>Build zcashd windows</em></p>
-<div class="codehilite"><pre><span></span>cd zcash-win
+<p>Note that we create two separate folders, because we&rsquo;re going to compile zcashd for Windows and Linux. </p>
+<p><strong>Build zcashd windows</strong></p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> zcash-win
 ./mkreleasewin.sh
 </pre></div>
 
 
-<p><em>Build zcashd linux</em></p>
-<div class="codehilite"><pre><span></span>cd zcash-linux
+<p><strong>Build zcashd linux</strong></p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> zcash-linux
 ./mkreleaselinux.sh
 </pre></div>
 
 
 <h3 id="setup-environment">Setup Environment<a class="headerlink" href="#setup-environment" title="Permanent link">&para;</a></h3>
 <p>Add the following paths to your <code>~/.bashrc</code>. Remember to add it at the very top, before the interactivity check, because we need these variables even in an ssh shell.</p>
-<div class="codehilite"><pre><span></span>export QT_STATIC=~/Qt/5.11.2/static/
-export MXE_PATH=~/github/mxe/usr/bin/
-export ZCASH_DIR=~/github/zcash
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">QT_STATIC</span><span class="o">=</span>~/Qt/5.11.2/static/
+<span class="nb">export</span> <span class="nv">MXE_PATH</span><span class="o">=</span>~/github/mxe/usr/bin/
+<span class="nb">export</span> <span class="nv">ZCASH_DIR</span><span class="o">=</span>~/github/zcash
 </pre></div>
 
 
 <h3 id="make-release-build">Make release build<a class="headerlink" href="#make-release-build" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>PREV_VERSION=0.2.5 APP_VERSION=0.2.6 src/scripts/mkrelease.sh
+<div class="codehilite"><pre><span></span><span class="nv">PREV_VERSION</span><span class="o">=</span><span class="m">0</span>.2.5 <span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.2.6 src/scripts/mkrelease.sh
 </pre></div>
 
 
@@ -763,16 +763,16 @@ export ZCASH_DIR=~/github/zcash
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <p>Install Xcode or Xcode Command Line Tools, and then install Qt 5.11</p>
 <p>From a terminal:</p>
-<div class="codehilite"><pre><span></span>cd ~/github/zec-qt-wallet/
-APP_VERSION=0.3.0 src/scripts/mkmacdmg.sh
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/github/zec-qt-wallet/
+<span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.3.0 src/scripts/mkmacdmg.sh
 </pre></div>
 
 
 <p>This will build the app and package it into a dmg and place it in the <code>artifacts/</code> folder</p>
 <h3 id="building-zcashd">Building zcashd<a class="headerlink" href="#building-zcashd" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>git clone git@github.com:adityapk00/zcash
-cd zcash 
-./zcutil/build.sh -j$(nproc)
+<span class="nb">cd</span> zcash 
+./zcutil/build.sh -j<span class="k">$(</span>nproc<span class="k">)</span>
 mkdir artifacts/
 cp src/zcashd artifacts/
 cp src/zcash-cli artifacts/
@@ -782,15 +782,15 @@ cp src/zcash-cli artifacts/
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <p>Even though zec-qt-wallet for Windows is cross-compiled on Linux, we still need a windows machine to build the installer. The windows installer is built using WiX toolset. Install WiX toolset 3.11.1 from <a href="http://wixtoolset.org/releases/">here</a>. After installation, please add the directory to the system path (both <code>candle.exe</code> and <code>light.exe</code> are runnable)</p>
 <p>To build the installer, in Powershell, run</p>
-<div class="codehilite"><pre><span></span>APP_VERSION=0.3.0 src/scripts/mkwininstaller.ps1
+<div class="codehilite"><pre><span></span><span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.3.0 src/scripts/mkwininstaller.ps1
 </pre></div>
 
 
 <h2 id="running-the-unified-build">Running the unified build<a class="headerlink" href="#running-the-unified-build" title="Permanent link">&para;</a></h2>
 <p>After all these 3 machines have been setup, we can build all the release artifacts (windows, linux, macOS binaries and installers) with one command, triggered from the Windows machine.</p>
 <p>(Replace <code>u1604</code>and <code>macmini</code> with names of the linux and macOS machines respectively)</p>
-<div class="codehilite"><pre><span></span>cd ~/github/zec-qt-wallet
-.\src\scripts\dobuild.ps1 -version 0.4.1 -prev 0.4.0 -server u1604 -macserver macmini
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/github/zec-qt-wallet
+.<span class="se">\s</span>rc<span class="se">\s</span>cripts<span class="se">\d</span>obuild.ps1 -version <span class="m">0</span>.4.1 -prev <span class="m">0</span>.4.0 -server u1604 -macserver macmini
 </pre></div>
 
 

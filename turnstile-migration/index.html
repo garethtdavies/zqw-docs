@@ -499,6 +499,7 @@
 </div>
 <h2 id="turnstile-migration-overview">Turnstile Migration overview<a class="headerlink" href="#turnstile-migration-overview" title="Permanent link">&para;</a></h2>
 <p><a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html">The Sapling turnstile</a> is an auditing mechanism for the number of ZEC in circulation. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses. To achieve this, owners of shielded ZEC are required to send their balances to a transparent address before sending to Sapling shielded addresses.</p>
+<p><img alt="Turnstile migration" src="/images/turnstile-1.png" /></p>
 <p>If you simply send the funds from a Sprout address to a transparent address to a Sapling address it would be relitavely trivial to link the balances.</p>
 <p>The [zcash docs] detail the best practises for handling this turnstile migration. zec-qt-wallet includes a tool to make this simple to migrate your shielded coins from the Sprout to Sapling sheilded pool. It is recommended that all users perform this migration.</p>
 <p>zec-qt-wallet can migrate your Sprout funds to a Sapling address in a privacy preserving manner folling the [privacy recommendations] by:</p>
@@ -514,6 +515,8 @@
 </div>
 <p>Steps&hellip;</p>
 <p>You may only perform one migration at a time using the app.</p>
+<p>You can check on the progress of the turnstile at any time:</p>
+<p><img alt="Turnstile progress" src="/images/turnstile-2.png" /></p>
                 
                   
                 
