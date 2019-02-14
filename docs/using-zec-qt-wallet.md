@@ -78,7 +78,7 @@ Note that by default when `zcashd` starts it creates 100 transparent addresses f
 
 ### Backing up wallet.dat
 
-You can backup all of your private keys by making a copy of the `wallet.dat` file. To recover you then replace any existing `wallet.dat` file in the [data directory](#). 
+You can backup all of your private keys by making a copy of the `wallet.dat` file. To recover you then replace any existing `wallet.dat` file in the [data directory](/faq/#where-is-the-default-data-directory-on-each-platform). 
 
 !!! danger "Create a new backup after each address"
     As new addresses are generated you will need to create an updated backup else the new keys will not be included.
@@ -197,7 +197,7 @@ See the [page on the turnstile migration](#turnstile-migration) for full details
 
 ## Customising `zcash.conf`
 
-The `zcash.conf` file may be used to customise how the `zcashd` software behaves. There are a number of [config options available](). when zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random password. The location of `zcash.conf` varies by system. By default it is located in the following location on each platform:
+The `zcash.conf` file may be used to customise how the `zcashd` software behaves. There are a number of [config options available](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html). when zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random password. The location of `zcash.conf` varies by system. By default it is located in the following location on each platform:
 
 * Windows: `%HOMEPATH%\AppData\Roaming\Zcash\zcash.conf`
 * macOS: `~/Library/Application Support/Zcash/zcash.conf`
@@ -217,6 +217,10 @@ If you want to connect to a remote zcashd, follow the following steps:
 * Go to Edit->Settings and set the remote node's host/post and rpc username/password
 * Make sure the zcashd on remote node is listening on all interfaces, and not just the localhost interface
 
-Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding (ssh -L8232:127.0.0.1:8232 user@remotehost) and set zec-qt-wallet to connect to localhost:8232
+Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding
 
-By default, only RPC connections from localhost are allowed.
+``` bash
+ssh -L8232:127.0.0.1:8232 user@remotehost
+```
+
+and set zec-qt-wallet to connect to localhost:8232. By default, only RPC connections from localhost are allowed.

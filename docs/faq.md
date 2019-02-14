@@ -15,7 +15,8 @@ See the [installation](/installation/#download-and-install) section for more det
 
 ### How do I verify the download file?
 
-//TODO All releases are signed and may be verified?
+//TODO 
+All releases are signed and may be verified?
 
 ## Blockchain
 
