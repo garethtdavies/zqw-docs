@@ -499,24 +499,24 @@
 </div>
 <h2 id="turnstile-migration-overview">Turnstile Migration overview<a class="headerlink" href="#turnstile-migration-overview" title="Permanent link">&para;</a></h2>
 <p><a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html">The Sapling turnstile</a> is an auditing mechanism for the number of ZEC in circulation. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses. To achieve this, owners of shielded ZEC are required to send their balances to a transparent address before sending to Sapling shielded addresses.</p>
-<p><img alt="Turnstile migration" src="/images/turnstile-1.png" /></p>
-<p>If you simply send the funds from a Sprout address to a transparent address to a Sapling address it would be relitavely trivial to link the balances.</p>
-<p>The [zcash docs] detail the best practises for handling this turnstile migration. zec-qt-wallet includes a tool to make this simple to migrate your shielded coins from the Sprout to Sapling sheilded pool. It is recommended that all users perform this migration.</p>
-<p>zec-qt-wallet can migrate your Sprout funds to a Sapling address in a privacy preserving manner folling the [privacy recommendations] by:</p>
+<p>If you simply send the funds from a Sprout address to a transparent address to a Sapling address it would be relitavely trivial to link the balances. The [zcash docs] detail the best practises for handling this turnstile migration. zec-qt-wallet includes a tool to make this simple to migrate your shielded coins from the Sprout to Sapling sheilded pool. It is recommended that all users perform this migration.</p>
+<p>zec-qt-wallet can migrate your Sprout funds to a Sapling address in a privacy preserving manner following the <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations">privacy recommendations</a> by:</p>
 <ul>
 <li>Creating new transparent addresses in your wallet to move from Sprout to the transparent addressess</li>
 <li>Splits the funds across multiple transaparent addresses over multiple blocks</li>
 <li>Uses rouund numbers to obscure any identifying information as these round number values e.g. 10 will be very common in the blockchain</li>
 </ul>
 <h2 id="using-the-turnstile-tool">Using the turnstile tool<a class="headerlink" href="#using-the-turnstile-tool" title="Permanent link">&para;</a></h2>
+<p><img alt="Turnstile migration" src="/images/turnstile-start.png" /></p>
+<p>To start the turnstile migration tool, simply open it by choosing <strong>Apps-&gt;Sapling Turnstile</strong> and choose the Sprout address (zc) to migrate funds from and the Sapling address (zs) to send funds too in addition to the number of days you would like to migrate the funds over.</p>
+<p>Generally, increasing the migrate over is the best solution but note that there will be an increase in the number of transactions all of which require a fee. The migrate over 4 days (2304 blocks) requires 10 transactions resulting in fees of 0.001 ZEC for the migration.</p>
 <div class="admonition tip">
 <p class="admonition-title">You do not need to keep the wallet open during the migration</p>
 <p>If you shut down the wallet then it&rsquo;ll send on reopening. You <em>will</em> need the wallet to be open in order for any transactions to be sent.</p>
 </div>
-<p>Steps&hellip;</p>
-<p>You may only perform one migration at a time using the app.</p>
+<p>Note that you may only perform one migration at a time using the app.</p>
 <p>You can check on the progress of the turnstile at any time:</p>
-<p><img alt="Turnstile progress" src="/images/turnstile-2.png" /></p>
+<p><img alt="Turnstile progress" src="/images/turnstile-progress.png" /></p>
                 
                   
                 

@@ -970,18 +970,23 @@
 <h3 id="shield-change-automatically-to-sapling-address">Shield change automatically to Sapling address<a class="headerlink" href="#shield-change-automatically-to-sapling-address" title="Permanent link">&para;</a></h3>
 <p>Like Bitcoin when using transparent addresses change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the app <a href="#"><strong>Options</strong></a>. As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.</p>
 <h3 id="connect-via-tor">Connect via TOR<a class="headerlink" href="#connect-via-tor" title="Permanent link">&para;</a></h3>
-<p>When using Zcash it does nothing to preserve your network level privacy so a unique IP address can allow network observers to correlate your Zcash transactions with each other abd with your other traffic.</p>
-<p>To overcome this you may use TOR to obsfucate your IP address.</p>
-<p>https://z.cash/support/security/privacy-security-recommendations</p>
-<p>Download TOR Expert Bundle (not TOR browser) from the <a href="https://www.torproject.org/download/download.html">official site</a>.</p>
+<p>When using Zcash <a href="https://z.cash/support/security/privacy-security-recommendations">it does nothing to preserve your network level privacy</a> so a unique IP address can allow network observers to correlate your Zcash transactions with each other and with your other traffic. To overcome this you may use TOR to obsfucate your IP address.</p>
+<p>You will first need to have TOR installed which you may do from the <a href="https://www.torproject.org/download/download.html">official site</a>. You will need to download and run the TOR Expert Bundle (not TOR browser). TOR is also available on all popular package managers e.g. macOS <code>brew install tor</code> or Debian <code>apt install tor</code>.</p>
+<p>Once running simply choose the option in zec-qt-wallet to <strong>Connect via TOR</strong> and the following line will be added to your <code>zcash.conf</code> file to configure TOR usage <code>proxy=127.0.0.1:9050</code>. Restart <code>zcashd</code>  to enable the service running over TOR.</p>
+<p>Use the advanced options when installing zec-qt-wallet to run <code>zcashd</code> over TOR from the first time so your IP is never exposed to the network.</p>
+<div class="admonition warning">
+<p class="admonition-title">Parameters are not currently downloaded over TOR</p>
+<p>As per this <a href="https://github.com/ZcashFoundation/zec-qt-wallet/issues/97">issue</a> the Zcash parameters that are downloaded on the first launch are not done so over TOR. </p>
+</div>
 <h4 id="onion-nodes">Onion Nodes<a class="headerlink" href="#onion-nodes" title="Permanent link">&para;</a></h4>
-<p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <code>zcash.conf</code> file:</p>
+<p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <code>zcash.conf</code> file:
+Tor to ensure that your IP address is not exposed to any Zcash-related services when installing, running, and updating a Zcash full node (zcashd)</p>
 <div class="codehilite"><pre><span></span>proxy=127.0.0.1:9050
 onlynet=onion
 </pre></div>
 
 
-<p>Then providing a list of onion nodes. // TODO clarify updates to this list</p>
+<p>Then provide a list of onion nodes. A sample list is provided below but these may change over time.</p>
 <div class="codehilite"><pre><span></span>addnode=zcmaintvsivr7pcn.onion
 addnode=zcashiqykswlzpsu.onion
 addnode=zcashqhrmju6zfhn.onion
