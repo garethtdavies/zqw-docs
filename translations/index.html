@@ -507,17 +507,20 @@
                 
                 <h1 id="translating-zec-qt-wallet">Translating zec-qt-wallet<a class="headerlink" href="#translating-zec-qt-wallet" title="Permanent link">&para;</a></h1>
 <hr />
-<p>To help with translations, first clone/fork the <a href="(https://github.com/ZcashFoundation/zec-qt-wallet)"><code>zec-qt-wallet</code> repository</a>. In the <code>res/</code> folder, you will find a number of <code>*.ts</code> files which contain the translations. If you don&rsquo;t find your language listed, please copy the <code>zec-qt-wallet_template.ts</code> file and use that.</p>
-<p>You can open the <code>*.ts</code> file (which is an XML file) and enter the translated strings manually using your favorite text editor, and enter the translations in the <code>translation</code> XML tag. It might be more productive to use the Qt Linguist tool, which provides a nice UI that has additional context and easily manages the strings for translations.</p>
+<p>To help with translations, first clone/fork the <a href="https://github.com/ZcashFoundation/zec-qt-wallet"><code>zec-qt-wallet</code> repository</a>. In the <code>res/</code> folder, you will find a number of <code>*.ts</code> files which contain the translations. If you don&rsquo;t find your language listed, please copy the <code>zec-qt-wallet_template.ts</code> file and use that.</p>
+<p>You can open the <code>*.ts</code> file (which is an XML file) and enter the translated strings manually using your favourite text editor, and enter the translations in the <code>translation</code> XML tag. It might be more productive to use the <a href="/translations/#installing-and-using-qt-linguist">Qt Linguist tool</a>, which provides a nice UI that has additional context and easily manages the strings for translations.</p>
 <h2 id="installing-and-using-qt-linguist">Installing and using Qt Linguist<a class="headerlink" href="#installing-and-using-qt-linguist" title="Permanent link">&para;</a></h2>
 <p>You can install the Qt open source distribution <a href="http://www.qt.io">from here</a>, and that comes with Qt Linguist. You can launch it by launching <code>/path/to/Qt5/bin/linguist res/zec_qt_wallet_&lt;language code&gt;.ts</code>. </p>
 <p>Windows and Mac builds for standalone Qt Linguist are <a href="https://github.com/lelegard/qtlinguist-installers/releases">available here</a>.</p>
 <p><img alt="Qt Linguist" src="/images/linguist-screenshot.png" /></p>
 <h2 id="submitting-translations">Submitting translations<a class="headerlink" href="#submitting-translations" title="Permanent link">&para;</a></h2>
-<p>Once you have updated the translations in the <code>*.ts</code> file, please create a pull request for the file. Please remember to &ldquo;confirm&rdquo; the translations from the Linguist menu (or remove the &ldquo;unfinished&rdquo; tag from XML element, if you are editing manually).</p>
-<p>Note that you don&rsquo;t have to translate all the strings. You can do this incrementally, and zec-qt-wallet will use all available translated strings, else fall back to English.</p>
+<p>Once you have updated the translations in the <code>*.ts</code> file, please create a <a href="https://github.com/ZcashFoundation/zec-qt-wallet/compare">pull request</a> for the file. Please remember to &ldquo;confirm&rdquo; the translations from the Linguist menu (or remove the &ldquo;unfinished&rdquo; tag from XML element, if you are editing manually).</p>
+<div class="admonition tip">
+<p class="admonition-title">Incomplete translations</p>
+<p>You don&rsquo;t have to translate all the strings. You can do this incrementally, and zec-qt-wallet will use all available translated strings, else fall back to English.</p>
+</div>
 <h2 id="testing-translations">Testing translations<a class="headerlink" href="#testing-translations" title="Permanent link">&para;</a></h2>
-<p>If you want to test the translations locally, you&rsquo;ll have to compile zec-qt-wallet. Please see <a href="https://github.com/ZcashFoundation/zec-qt-wallet#compiling-from-source">compiling from source</a> instructions.</p>
+<p>If you want to test the translations locally, you&rsquo;ll have to compile zec-qt-wallet. Please see <a href="/compile-from-source/">compiling from source</a> instructions.</p>
 <p>Save the linguist file, and then, from a command prompt (remember to replace <code>ln</code> with your language code):</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Compile the translations</span>
 /path/to/qt5/bin/lrelease res/zec_qt_wallet_&lt;ln&gt;.ts

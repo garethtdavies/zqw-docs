@@ -952,7 +952,7 @@
 <p>You can export all private keys for addresses in your wallet by choosing the <strong>Export all private keys</strong> from the File menu. This will provide a list of all private keys.</p>
 <p>Note that by default when <code>zcashd</code> starts it creates 100 transparent addresses for the keypool for use as change addresses hence this list will always contain at least 100 transparent address keys not all of which have been used. </p>
 <h3 id="backing-up-walletdat">Backing up wallet.dat<a class="headerlink" href="#backing-up-walletdat" title="Permanent link">&para;</a></h3>
-<p>You can backup all of your private keys by making a copy of the <code>wallet.dat</code> file. To recover you then replace any existing <code>wallet.dat</code> file in the <a href="#">data directory</a>. </p>
+<p>You can backup all of your private keys by making a copy of the <code>wallet.dat</code> file. To recover you then replace any existing <code>wallet.dat</code> file in the <a href="/faq/#where-is-the-default-data-directory-on-each-platform">data directory</a>. </p>
 <div class="admonition danger">
 <p class="admonition-title">Create a new backup after each address</p>
 <p>As new addresses are generated you will need to create an updated backup else the new keys will not be included.</p>
@@ -1030,7 +1030,7 @@ addnode=zcashuhmzycmlwld.onion
 <h3 id="turnstile-migration">Turnstile migration<a class="headerlink" href="#turnstile-migration" title="Permanent link">&para;</a></h3>
 <p>See the <a href="#turnstile-migration">page on the turnstile migration</a> for full details.</p>
 <h2 id="customising-zcashconf">Customising <code>zcash.conf</code><a class="headerlink" href="#customising-zcashconf" title="Permanent link">&para;</a></h2>
-<p>The <code>zcash.conf</code> file may be used to customise how the <code>zcashd</code> software behaves. There are a number of <a href="">config options available</a>. when zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random password. The location of <code>zcash.conf</code> varies by system. By default it is located in the following location on each platform:</p>
+<p>The <code>zcash.conf</code> file may be used to customise how the <code>zcashd</code> software behaves. There are a number of <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html">config options available</a>. when zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random password. The location of <code>zcash.conf</code> varies by system. By default it is located in the following location on each platform:</p>
 <ul>
 <li>Windows: <code>%HOMEPATH%\AppData\Roaming\Zcash\zcash.conf</code></li>
 <li>macOS: <code>~/Library/Application Support/Zcash/zcash.conf</code></li>
@@ -1050,8 +1050,12 @@ over the OS account running zcashd.</p>
 <li>Go to Edit-&gt;Settings and set the remote node&rsquo;s host/post and rpc username/password</li>
 <li>Make sure the zcashd on remote node is listening on all interfaces, and not just the localhost interface</li>
 </ul>
-<p>Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding (ssh -L8232:127.0.0.1:8232 user@remotehost) and set zec-qt-wallet to connect to localhost:8232</p>
-<p>By default, only RPC connections from localhost are allowed.</p>
+<p>Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding</p>
+<div class="codehilite"><pre><span></span>ssh -L8232:127.0.0.1:8232 user@remotehost
+</pre></div>
+
+
+<p>and set zec-qt-wallet to connect to localhost:8232. By default, only RPC connections from localhost are allowed.</p>
                 
                   
                 
