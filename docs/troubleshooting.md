@@ -39,6 +39,8 @@ The most likely cause for this is that you are trying to spend unconfirmed funds
 
 ## My node isn't syncing
 
+_There's a number of variables that determine syncing speeds because the blocks are being verified in addition to downloaded... memory, CPU and bandwidth. Is the hardware you use to sync other blockchains the same or comparable to the one you're using for zcash?_
+
 If your node isn't syncing or is slow to sync, first check that you are running the latest version of zec-qt-wallet then check that you have connections to other nodes as you may have a network issue. zec-qt-wallet will display if you are connected via the application footer. 
 
 ![zec-qt-wallet connections](images/connections.png)

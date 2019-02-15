@@ -15,9 +15,7 @@ See the [installation](/installation/#download-and-install) section for more det
 
 ### How do I verify the download file?
 
-// TODO check this info
-
-All releases on the [Github repository](https://github.com/ZcashFoundation/zec-qt-wallet) are signed by [adityapk00](https://github.com/adityapk00) and their PGP key is available to be verified ... 
+// TODO update this once signed releases are pushed
 
 ## Blockchain
 
