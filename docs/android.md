@@ -2,7 +2,7 @@
 
 ---
 
-!!! warning "The Android app is beta software"
+!!! warning "The Android app is beta software."
     Although everything will work fine on mainnet, since this is beta software, it is recommended you run it on the Zcash testnet. Add `testnet=1` into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to [enable the testnet](/faq/#does-zec-qt-wallet-work-on-testnet).
 
 **ZecQT Android** is an Android frontend for zec-qt-wallet that lets you send and receive payments from your mobile phone.
@@ -11,9 +11,9 @@
 
 ## Participating in the beta
 
-ZecQT Android is currently in beta, and to participate in the beta program, you need to run zec-qt-wallet and install the APK on your Android phone. Head to the [releases page](#) to download the APK.
+ZecQT Android is currently in beta, and to participate in the beta program you need to run zec-qt-wallet and install the APK on your Android phone. Head to the [releases page](#) to download the APK.
 
-In order to let your Android phone connect to your desktop, you need to run a special version of zec-qt-wallet. You can download it from the [releases page](#) and run the binary for your platform. Note that the regular version of zec-qt-wallet doesn't let you connect your Android phone.
+To let your Android phone connect to your desktop, you need to run a special version of zec-qt-wallet. You can download it from the [releases page](#) and run the binary for your platform. Note that the regular version of zec-qt-wallet doesn't let you connect your Android phone.
 
 You can run your standard version of `zcashd` or let zec-qt-wallet run its embedded zcashd. Although everything will work fine on mainnet, since this is beta software, it is recommended you run it on the Zcash testnet. Add `testnet=1` into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to [enable the testnet](/faq/#does-zec-qt-wallet-work-on-testnet).
 
@@ -51,7 +51,7 @@ The Android app will first attempt a direct connection each time you open the Ap
 
 ### How can I safely connect over the internet without using the wormhole service?
 
-You'll need to install a VPN on your home network, so you can VPN into your network from 4G/LTE networks, and then connect directly to your node. For example you can use a service such as [Pi VPN](https://www.pivpn.io/).
+You'll need to install a VPN on your home network, so you can VPN into your network from 4G/LTE networks, and then connect directly to your node. For example, you can use a service such as [Pi VPN](https://www.pivpn.io/).
 
 ## Currently known limitations
 
