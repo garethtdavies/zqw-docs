@@ -918,13 +918,13 @@
 <p class="admonition-title">Backup after generating a new address</p>
 <p>Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be <a href="#">recreated from a seed</a> whereas transaparent or Sprout addresses either require the private key or a wallet.dat backup made after the address was created. See the <a href="#">Backup section</a> for more details.</p>
 </div>
-<p><img alt="Addresses Tab" src="/images/addresses.png" />    </p>
+<p><img alt="Addresses Tab" src="../images/addresses.png" />    </p>
 <p>Transparent addresses are automatically created when clicking the <strong>t-Addr</strong> button as transparent addressess should not be reused. Unlike transparent addresses it is fine to reuse shielded addresses and so new addresses can be manually created via the <strong>New Address</strong> button.</p>
 <p>Optionally add a label to easily identify the address and add it to your address book. A QR code is also provided for the address which may be used to receive funds.</p>
 <p>zec-qt-wallet will also show if the address has been previously used.</p>
 <h2 id="sending-a-transaction">Sending a transaction<a class="headerlink" href="#sending-a-transaction" title="Permanent link">&para;</a></h2>
 <p>Once you&rsquo;ve generated an address and have sent some funds to it, you can send some ZEC. Click on the <strong>Send</strong> tab:</p>
-<p><img alt="Send Tab" src="/images/send.png" /></p>
+<p><img alt="Send Tab" src="../images/send.png" /></p>
 <p>You can only send funds with at least one confirmation. While transactions are being confirmed they are easily identificable as they are highlighted in red.</p>
 <p>Choose an address with funds in it and enter the receipient address. You may specifify multiple recipients per transaction and there may be a mixture of transparent and shielded recipients. The Memo field is only available when sending <strong>to</strong> a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the Options section if you wish to customise this behviour and understand the implications.</p>
 <div class="admonition note">
@@ -936,7 +936,7 @@
 <p>This will open up the default block explorer of xxxx. If your transaction is a shielded one there will not be any public information available except the mining fee (as in the example transaction above). Once the funds are confirming any values will be highlighted in red until they receive one confirmation and will not be spendable until they have had one confirmation.</p>
 <h3 id="pay-zcash-uri">Pay Zcash URI<a class="headerlink" href="#pay-zcash-uri" title="Permanent link">&para;</a></h3>
 <p>Now pay zcash URIs by selecting File -&gt; Pay Zcash URI and pasting the payment URI.</p>
-<p><img alt="Pay Zcash URI" src="/images/pay-zcash-uri.png" /></p>
+<p><img alt="Pay Zcash URI" src="../images/pay-zcash-uri.png" /></p>
 <p>Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can copy-paste it into zec-qt-wallet and make payments easily.</p>
 <h2 id="address-book">Address book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
 <p>The address book makes managing addresses and labels simple. Either select <strong>Address Book</strong> in the application menu or select the button on the <strong>Send</strong> tab. You can import an address book in csv format?</p>
@@ -962,7 +962,7 @@
 <p>To import a private key, simply choose the <strong>Import private key</strong> from the File main menu. You may paste in multiple keys, one per line that will be imported into the wallet. Note that depending on the number of keys to import and if they are shielded addresses it may take some time for the import to be completed.</p>
 <h2 id="zeq-qt-wallet-options">zeq-qt-wallet options<a class="headerlink" href="#zeq-qt-wallet-options" title="Permanent link">&para;</a></h2>
 <p>zec-qt wallet has a number of options that allow you to customise how the software works and may be accessed in the <strong>Settings-&gt;Options</strong> menu as shown below.</p>
-<p><img alt="zec-qt-wallet options" src="/images/options.png" /></p>
+<p><img alt="zec-qt-wallet options" src="../images/options.png" /></p>
 <h3 id="remember-shielded-transactions">Remember shielded transactions<a class="headerlink" href="#remember-shielded-transactions" title="Permanent link">&para;</a></h3>
 <p>By default <code>zcashd</code> will not store information about your outgoing fully shielded transactions. By default zec-qt-wallet will store outgoing transactions in an local database so that any shielded spends will appear on the transactions tab. If you do not wish these transactions to be stored by zec-qt-wallet simply toggle the option for &ldquo;Remember shielded transactions&rdquo;. At any point you may clear your shielded transaction history locally (there is no way of recovering this data).</p>
 <h3 id="allow-custom-fees">Allow custom fees<a class="headerlink" href="#allow-custom-fees" title="Permanent link">&para;</a></h3>
@@ -1013,20 +1013,20 @@ addnode=zcashuhmzycmlwld.onion
 <h2 id="encrypted-memo-field">Encrypted Memo field<a class="headerlink" href="#encrypted-memo-field" title="Permanent link">&para;</a></h2>
 <p>The encypted memo field allows a user to include an optional memo of up to 512 bytes in their transaction. As the transaction is encrypted on the blockchain only the recipient of the transaction can read the memo. This could, for example, be used to include information about the sender for a purchase or a refund address and there is more detail about potential usage of this field in this <a href="https://z.cash/blog/encrypted-memo-field/">blog post</a>.</p>
 <p>You can only include a memo when sending <strong>to</strong> a shielded address. To include a memo in a transacion simply click the <strong>Memo</strong> button and it will provide a textbox allow you to enter 512 characters. </p>
-<p><img alt="Memo" src="/images/send-memo.png" /></p>
+<p><img alt="Memo" src="../images/send-memo.png" /></p>
 <h3 id="including-a-reply-address">Including a reply address<a class="headerlink" href="#including-a-reply-address" title="Permanent link">&para;</a></h3>
 <p>If you want to send a reply to address in the memo field for example if you are using the memo field as an encrypted chat application the zec-qt-wallet allows you to include a reply address in a standard format. To use, simply press the <strong>Include Reply Address</strong> and the sending address will automatically be inserted.</p>
-<p><img alt="Memo reply to address" src="/images/memo-reply-address.png" /></p>
+<p><img alt="Memo reply to address" src="../images/memo-reply-address.png" /></p>
 <h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
 <p>If you receive a transaction with a memo that contains a <a href="#">reply address</a>, you can now reply to it from the transactions table. Simply right click the transaction and choose <strong>Reply to xxx</strong>.</p>
-<p><img alt="Reply to a memo" src="/images/memo-reply-to.png" /></p>
+<p><img alt="Reply to a memo" src="../images/memo-reply-to.png" /></p>
 <h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: Type  Address Date/Time   Amount  Memo</p>
 <h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet bundles some aplications to make common tasks simpler.</p>
 <h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
 <p><a href="http://z-board.net/">z-board.net</a> is a message board based on the encrypted memo field. When using shielded addresses messages are anonymous. zec-qt-wallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address.</p>
-<p><img alt="zboard" src="/images/zboard.png" /></p>
+<p><img alt="zboard" src="../images/zboard.png" /></p>
 <h3 id="turnstile-migration">Turnstile migration<a class="headerlink" href="#turnstile-migration" title="Permanent link">&para;</a></h3>
 <p>See the <a href="#turnstile-migration">page on the turnstile migration</a> for full details.</p>
 <h2 id="customising-zcashconf">Customising <code>zcash.conf</code><a class="headerlink" href="#customising-zcashconf" title="Permanent link">&para;</a></h2>
