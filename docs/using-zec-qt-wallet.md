@@ -20,7 +20,7 @@ Visting the **Receive** tab of zec-qt-wallet will show all current addresses and
 !!! tip "Backup after generating a new address"
     Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be [recreated from a seed](#) whereas transaparent or Sprout addresses either require the private key or a wallet.dat backup made after the address was created. See the [Backup section](#) for more details.
 
-![Addresses Tab](/images/addresses.png)    
+![Addresses Tab](images/addresses.png)    
 
 Transparent addresses are automatically created when clicking the **t-Addr** button as transparent addressess should not be reused. Unlike transparent addresses it is fine to reuse shielded addresses and so new addresses can be manually created via the **New Address** button.
 
@@ -32,7 +32,7 @@ zec-qt-wallet will also show if the address has been previously used.
 
 Once you've generated an address and have sent some funds to it, you can send some ZEC. Click on the **Send** tab:
 
-![Send Tab](/images/send.png)
+![Send Tab](images/send.png)
 
 You can only send funds with at least one confirmation. While transactions are being confirmed they are easily identificable as they are highlighted in red.
 
@@ -51,7 +51,7 @@ This will open up the default block explorer of xxxx. If your transaction is a s
 
 Now pay zcash URIs by selecting File -> Pay Zcash URI and pasting the payment URI.
 
-![Pay Zcash URI](/images/pay-zcash-uri.png)
+![Pay Zcash URI](images/pay-zcash-uri.png)
 
 Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can copy-paste it into zec-qt-wallet and make payments easily.
 
@@ -93,7 +93,7 @@ To import a private key, simply choose the **Import private key** from the File 
 
 zec-qt wallet has a number of options that allow you to customise how the software works and may be accessed in the **Settings->Options** menu as shown below.
 
-![zec-qt-wallet options](/images/options.png)
+![zec-qt-wallet options](images/options.png)
 
 ### Remember shielded transactions
 
@@ -163,19 +163,19 @@ The encypted memo field allows a user to include an optional memo of up to 512 b
 
 You can only include a memo when sending **to** a shielded address. To include a memo in a transacion simply click the **Memo** button and it will provide a textbox allow you to enter 512 characters. 
 
-![Memo](/images/send-memo.png)
+![Memo](images/send-memo.png)
 
 ### Including a reply address
 
 If you want to send a reply to address in the memo field for example if you are using the memo field as an encrypted chat application the zec-qt-wallet allows you to include a reply address in a standard format. To use, simply press the **Include Reply Address** and the sending address will automatically be inserted.
 
-![Memo reply to address](/images/memo-reply-address.png)
+![Memo reply to address](images/memo-reply-address.png)
 
 ### Replying to a memo
 
 If you receive a transaction with a memo that contains a [reply address](#), you can now reply to it from the transactions table. Simply right click the transaction and choose **Reply to xxx**.
 
-![Reply to a memo](/images/memo-reply-to.png)
+![Reply to a memo](images/memo-reply-to.png)
 
 ## Exporting transactions
 
@@ -189,7 +189,7 @@ zec-qt-wallet bundles some aplications to make common tasks simpler.
 
 [z-board.net](http://z-board.net/) is a message board based on the encrypted memo field. When using shielded addresses messages are anonymous. zec-qt-wallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address.
 
-![zboard](/images/zboard.png)
+![zboard](images/zboard.png)
 
 ### Turnstile migration
 

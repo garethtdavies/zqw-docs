@@ -12,7 +12,7 @@ You can install the Qt open source distribution [from here](http://www.qt.io), a
 
 Windows and Mac builds for standalone Qt Linguist are [available here](https://github.com/lelegard/qtlinguist-installers/releases).
 
-![Qt Linguist](/images/linguist-screenshot.png)
+![Qt Linguist](images/linguist-screenshot.png)
 
 ## Submitting translations
 

@@ -133,7 +133,7 @@ Yes, simply click the **Clear History** button in the [**Options**](/using-zec-q
 
 If there is a [memo](/using-zec-qt-wallet/#encrypted-memo-field) attached to a transaction then it will be visible by a message icon by the transaction. Simply right click the transaction and choose **View Memo**.
 
-![Memo](/images/memo.png)
+![Memo](images/memo.png)
 
 ### Can I use zec-qt-wallet with a hardware wallet?
 
@@ -176,7 +176,7 @@ WinZEC has now been deprecated. You can simply install zec-qt-wallet and it'll u
 
 Yes, simply browse to the location of the address book file. By default this will be `%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv` where `%/HOMEPATH%` is typically `C:\Users\YourUsername\` and you may need to enable viewing hidden files to browse to the `AppData` folder location.
 
-![Import address book](/images/import-address-book.png)
+![Import address book](images/import-address-book.png)
 
 ## What languages is zec-qt-wallet available in?
 

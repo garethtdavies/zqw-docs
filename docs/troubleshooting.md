@@ -41,7 +41,7 @@ The most likely cause for this is that you are trying to spend unconfirmed funds
 
 If your node isn't syncing or is slow to sync, first check that you are running the latest version of zec-qt-wallet then check that you have connections to other nodes as you may have a network issue. zec-qt-wallet will display if you are connected via the application footer. 
 
-![zec-qt-wallet connections](/images/connections.png)
+![zec-qt-wallet connections](images/connections.png)
 
 You can also find this information in the **zcashd** tab on the main menu (if you are running the embedded `zcashd`) and it will list the number of connections to other peers which should be greater than 0. If you do not have any connections then check your internet connection, then check that the [ports required](/troubleshooting/#zcashd-ports) for `zcashd` are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.
 

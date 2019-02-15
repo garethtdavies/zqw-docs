@@ -29,7 +29,7 @@ When your phone and your desktop are on the same network (eg. on your home netwo
 
 If your phone is on a different network (if you're connected via 4G/LTE, for example) or if your desktop zec-qt-wallet is behind a firewall, your phone can't directly reach your desktop. In this scenario, your phone and desktop both connect to a service run by zec-qt-wallet (called wormhole.zecqtwallet.com), which routes information between your phone and your desktop.
 
-![Wormhole connection](/images/wormholeconnect.png)
+![Wormhole connection](images/wormholeconnect.png)
 
 ## Android App FAQ
 
@@ -37,7 +37,7 @@ If your phone is on a different network (if you're connected via 4G/LTE, for exa
 
 This is already the default. If you want to connect over the internet via wormhole.zecqtwallet.com, you will need to opt-in by checking the **Connect over internet** checkbox on the connection page.
 
-![Connect over internet](/images/connectoverinternetcheckbox.png)
+![Connect over internet](images/connectoverinternetcheckbox.png)
 
 You can also disable connecting over the internet via wormhole.zecqtwallet.com in the Android app's settings.
 
