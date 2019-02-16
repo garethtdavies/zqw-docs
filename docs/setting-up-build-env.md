@@ -1,11 +1,11 @@
-# Setup a build environment
+# Setting up a build environment
 ---
 
 ## Linux
 
 ### Pre-requisites
 
-It's best to set up a build environment on Ubuntu 16.04. It brings the right versions of libc and libstdc++ that ensures maximum compatibility. You can build on newer versions of Linux distros, but binaries compiled on these platforms may not work on older versions.
+It is best to set up a build environment on Ubuntu 16.04. It brings the right versions of libc and libstdc++ that ensures maximum compatibility. You can build on newer versions of Linux distros, but binaries compiled on these platforms may not work on older versions.
 
 ``` bash
 # build dependencies
@@ -37,7 +37,7 @@ wget https://download.qt.io/archive/qt/5.11/5.11.2/single/qt-everywhere-src-5.11
 tar xvf qt-everywhere-src-5.11.2.tar.xz && cd qt-everywhere-src-5.11.2
 ```
 
-Configure and build Qt5 statically
+Configure and build Qt5 statically.
 
 ``` bash
 OPENSSL_LIBS='-L/path/to/openssl-1.0.2q -lssl -lcrypto' ./configure -static -prefix ~/Qt/5.11.2/static  -skip qtlocation -skip qtmacextras -skip qtpurchasing -skip qtscript -skip qtsensors -skip qtserialbus -skip qtserialport -skip qtspeech -skip qtdatavis3d -skip qtdoc -skip qtcharts -skip qtdeclarative -skip qt3d -skip qtwebengine -skip qtandroidextras -skip qtwebview -skip qtgamepad -skip qtquickcontrols -skip qtquickcontrols2 -skip qtremoteobjects -skip qtwebview -skip qtwebchannel -skip qtwebglplugin  -nomake examples -nomake tests -qt-zlib -qt-libpng -qt-xcb -qt-xkbcommon -feature-fontconfig -no-feature-getentropy  -release -openssl-linked -opensource
@@ -60,13 +60,13 @@ make -j$(nproc) MXE_TARGETS=x86_64-w64-mingw32.static qtbase qtwebsockets
 ### Build zec-qt-wallet
 
 ``` bash
-git clone git@github.com:adityapk00/zec-qt-wallet.git
+git clone git@github.com:ZcashFoundation/zec-qt-wallet.git
 ~/Qt/5.11.2/static/bin/qmake zec-qt-wallet.pro CONFIG+=debug-spec linux-clang
 
 make -j$(nproc)
 ```
 
-### Compiling zcashd for embedded zcashd
+### Compiling `zcashd` for embedded zcashd
 
 ``` bash
 git clone git@github.com:adityapk00/zcash zcash-linux
@@ -74,16 +74,16 @@ git clone git@github.com:adityapk00/zcash zcash-win
 mkdir -p ~/zcash/artifacts # Built zcashd goes here.
 ```
 
-Note that we create two separate folders, because we're going to compile zcashd for Windows and Linux. 
+Note that we create two separate folders because we're going to compile `zcashd` for Windows and Linux. 
 
-**Build zcashd windows**
+**Build `zcashd` windows**
 
 ``` bash
 cd zcash-win
 ./mkreleasewin.sh
 ```
 
-**Build zcashd linux**
+**Build `zcashd` Linux**
 
 ``` bash
 cd zcash-linux
@@ -106,11 +106,11 @@ export ZCASH_DIR=~/github/zcash
 PREV_VERSION=0.2.5 APP_VERSION=0.2.6 src/scripts/mkrelease.sh
 ```
 
-This will put all the windows and linux compiled binaries into the `artifacts` folder
+This will put all the Windows and Linux compiled binaries into the `artifacts` folder
 
 ## macOS
 
-Install Xcode or Xcode Command Line Tools, and then install Qt 5.11
+Install Xcode or Xcode Command Line Tools, and then install Qt 5.11.
 
 From a terminal:
 
@@ -120,7 +120,7 @@ APP_VERSION=0.3.0 src/scripts/mkmacdmg.sh
 ```
 This will build the app and package it into a dmg and place it in the `artifacts/` folder
 
-### Building zcashd
+### Building `zcashd`
 
 ``` bash
 git clone git@github.com:adityapk00/zcash
@@ -133,9 +133,9 @@ cp src/zcash-cli artifacts/
 
 ## Windows
 
-Even though zec-qt-wallet for Windows is cross-compiled on Linux, we still need a windows machine to build the installer. The windows installer is built using WiX toolset. Install WiX toolset 3.11.1 from [here](http://wixtoolset.org/releases/). After installation, please add the directory to the system path (both `candle.exe` and `light.exe` are runnable)
+Even though zec-qt-wallet for Windows is cross-compiled on Linux, we still need a Windows machine to build the installer. The Windows installer is built using WiX toolset. Install WiX toolset 3.11.1 from [here](http://wixtoolset.org/releases/). After installation, add the directory to the system path (both `candle.exe` and `light.exe` are runnable)
 
-To build the installer, in Powershell, run
+To build the installer, in Powershell, run:
 
 ``` bash
 APP_VERSION=0.3.0 src/scripts/mkwininstaller.ps1
@@ -143,13 +143,13 @@ APP_VERSION=0.3.0 src/scripts/mkwininstaller.ps1
 
 ## Running the unified build
 
-After all these 3 machines have been setup, we can build all the release artifacts (windows, linux, macOS binaries and installers) with one command, triggered from the Windows machine.
+After all these 3 machines have been set up, we can build all the release artifacts (Windows, Linux, macOS binaries and installers) with one command, triggered from the Windows machine.
 
-(Replace `u1604 `and `macmini` with names of the linux and macOS machines respectively)
+(Replace `u1604 `and `macmini` with names of the Linux and macOS machines respectively)
 
 ``` bash
 cd ~/github/zec-qt-wallet
 .\src\scripts\dobuild.ps1 -version 0.4.1 -prev 0.4.0 -server u1604 -macserver macmini
 ```
 
-This will build all 3 platforms and their installers, and place everything in the `artifacts` folder on the windows machine.
+This will build all three platforms and their installers, and place everything in the `artifacts` folder on the Windows machine.
