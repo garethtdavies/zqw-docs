@@ -224,3 +224,5 @@ ssh -L8232:127.0.0.1:8232 user@remotehost
 ```
 
 and set zec-qt-wallet to connect to localhost:8232. By default, only RPC connections from localhost are allowed.
+
+// TODO can enter settings manually?
