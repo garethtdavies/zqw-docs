@@ -68,6 +68,9 @@ make -j$(nproc)
 
 ### Compiling `zcashd` for embedded zcashd
 
+!!! note "Compile embedded `zcashd` from adityapk00/zcashd"
+    The zcashd compilation is specific to [adityapk00/zcashd](https://github.com/adityapk00/zcash) as there are some custom patches for new RPC calls that help with the embedding of zcashd that are not included in the upstream [zcash/zcash](https://github.com/zcash/zcash) repository.
+
 ``` bash
 git clone git@github.com:adityapk00/zcash zcash-linux
 git clone git@github.com:adityapk00/zcash zcash-win
