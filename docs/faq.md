@@ -13,9 +13,8 @@ The Android application, which is still in beta, may be downloaded [from here](h
 
 See the [installation](/installation/#download-and-install) section for more details specific for your platform.
 
-### How do I verify the download file?
-
-// TODO update this once signed releases are pushed
+[//]: # (### How do I verify the download file?)
+[//]: # (TODO once signed binaries are pushed)
 
 ## Blockchain
 
@@ -183,7 +182,7 @@ WinZEC has now been deprecated. You can simply install zec-qt-wallet and it'll u
 
 ### Can I import the WinZEC address book?
 
-Yes, browse to the location of the address book file. By default this will be `%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv` where `%/HOMEPATH%` is typically `C:\Users\YourUsername\` and you may need to enable viewing hidden files to browse to the `AppData` folder location.
+Yes, browse to the location of the address book file. By default this will be `%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv` where `%/HOMEPATH%` is typically `C:\Users\username\` and you may need to enable viewing hidden files to browse to the `AppData` folder location.
 
 ![Import address book](images/import-address-book.png)
 
