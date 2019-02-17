@@ -1,4 +1,4 @@
-# Troubleshooting
+# Troubleshooting issues
 
 ---
 
@@ -17,6 +17,14 @@ tail -n 100 ~/.zcash/debug.log
 ```
 
 On Windows `%HOMEPATH%` is typically `C:\Users\username` where `username` is your username. 
+
+## The `zec-qt-wallet.log` file
+
+As with the `debug.log` file, the `zec-qt-wallet.log` file will help to identify issues with the zec-qt-wallet application. Providing the latest output of this file can help in troubleshooting issues. The location of this file is in the following location for each platform: 
+
+* Windows: `%HOMEPATH%\AppData\Roaming\zec-qt-wallet-org\zec-qt-wallet\zec-qt-wallet.log`
+* macOS: `/Users/gareth/Library/Application Support/zec-qt-wallet-org/zec-qt-wallet/zec-qt-wallet.log`
+* Linux:
 
 ## My node isn't syncing or is slow to sync
 

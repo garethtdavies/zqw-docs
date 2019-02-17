@@ -11,9 +11,9 @@
 
 ## Participating in the beta
 
-ZecQT Android is currently in beta, and to participate in the beta program you need to run zec-qt-wallet and install the APK on your Android phone. Head to the [releases page](#) to download the APK.
+ZecQT Android is currently in beta, and to participate in the beta program you need to run zec-qt-wallet and install the APK on your Android phone. Head to the [releases page](https://github.com/adityapk00/zqwandroid/releases) to download the APK.
 
-To let your Android phone connect to your desktop, you need to run a special version of zec-qt-wallet. You can download it from the [releases page](#) and run the binary for your platform. Note that the regular version of zec-qt-wallet doesn't let you connect your Android phone.
+To let your Android phone connect to your desktop, you need to run a special version of zec-qt-wallet. You can download it from the [releases page](https://github.com/adityapk00/zqwandroid/releases) and run the binary for your platform. Note that the regular version of zec-qt-wallet doesn't let you connect your Android phone.
 
 You can run your standard version of `zcashd` or let zec-qt-wallet run its embedded zcashd. Although everything will work fine on mainnet, since this is beta software, it is recommended you run it on the Zcash testnet. Add `testnet=1` into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to [enable the testnet](/faq/#does-zec-qt-wallet-work-on-testnet).
 
@@ -63,4 +63,4 @@ Currently known limitations
 * You can't generate new z-addrs or t-addrs from the phone.
 
 ## Issues or feature requests
-Please file all the feedback you can. You can file issues in the [issues tab](https://github.com/adityapk00/zqwandroid/issues). 
+Please file all the feedback you can. You can file issues in the [issues tab](https://github.com/adityapk00/zqwandroid/issues).
