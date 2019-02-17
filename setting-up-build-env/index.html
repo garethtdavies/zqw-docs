@@ -727,6 +727,10 @@ make -j<span class="k">$(</span>nproc<span class="k">)</span>
 
 
 <h3 id="compiling-zcashd-for-embedded-zcashd">Compiling <code>zcashd</code> for embedded zcashd<a class="headerlink" href="#compiling-zcashd-for-embedded-zcashd" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Compile embedded <code>zcashd</code> from adityapk00/zcashd</p>
+<p>The zcashd compilation is specific to <a href="https://github.com/adityapk00/zcash">adityapk00/zcashd</a> as there are some custom patches for new RPC calls that help with the embedding of zcashd that are not included in the upstream <a href="https://github.com/zcash/zcash">zcash/zcash</a> repository.</p>
+</div>
 <div class="codehilite"><pre><span></span>git clone git@github.com:adityapk00/zcash zcash-linux
 git clone git@github.com:adityapk00/zcash zcash-win
 mkdir -p ~/zcash/artifacts <span class="c1"># Built zcashd goes here.</span>
