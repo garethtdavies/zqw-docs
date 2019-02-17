@@ -129,9 +129,6 @@ This will build the app and package it into a dmg and place it in the `artifacts
 git clone git@github.com:adityapk00/zcash
 cd zcash 
 ./zcutil/build.sh -j$(nproc)
-mkdir artifacts/
-cp src/zcashd artifacts/
-cp src/zcash-cli artifacts/
 ```
 
 ## Windows

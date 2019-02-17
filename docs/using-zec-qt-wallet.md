@@ -11,14 +11,14 @@ Now that you have zec-qt-wallet [installed](/installation) it is time to start u
 If you are using the embedded `zcashd` and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a `zcash.conf` file created specifying some default configuration values. The blockchain will then begin to sync, which is a time consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner wof zec-qt-wallet which displays the number of blocks downloaded and a sync percentage.
 
 !!! note "Initial Sync"
-    The blockchain is around **21GB** in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.
+    The blockchain is around **22GB** in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.
 
 ## Generating a new address
 
 Visting the **Receive** tab of zec-qt-wallet will show all current addresses and enable you to generate new ones. To learn about the different types of addresses available which are transparent, shielded (Sprout and Sapling) please visit [this page](https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html). It is not possible to remove an address from the wallet once it has been generated.
 
 !!! tip "Backup after generating a new address"
-    Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be [recreated from a seed](#) whereas transaparent or Sprout addresses either require the private key or a wallet.dat backup made after the address was created. See the [Backup section](#) for more details.
+    Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be [recreated from a seed](https://z.cash/blog/sapling-in-hd/) whereas transaparent or Sprout addresses either require the private key or a wallet.dat backup made after the address was created. See the [Backing up section](/using-zec-qt-wallet/#backing-up) for more details.
 
 ![Addresses Tab](images/addresses.png)    
 

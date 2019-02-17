@@ -152,6 +152,8 @@ No, addresses cannot be removed from the wallet. It is advised that you [export 
 
 //TODO
 
+//Can I import a seed word from Coinomi etc... No you need to convert to private key via <list website here> https://coinomi.freshdesk.com/support/solutions/articles/29000009717-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys-  https://iancoleman.io/bip39/
+
 #### Can zec-qt-wallet export a 12/18/24 word seed
 
 //TODO
@@ -159,6 +161,12 @@ No, addresses cannot be removed from the wallet. It is advised that you [export 
 No, `zcashd` does not support BIP xxx. Sapling does use a HD wallet xxx https://z.cash/blog/sapling-in-hd/
 
 https://github.com/zcash/zcash/issues/2673
+
+#### Can I import a seed from a wallet such as Coinoimi or Jaxx?
+
+...
+
+You cannot import seed words but you can use a tool to obtain the private keys for the seed words and then import these into zec-qt-wallet.
 
 #### Where can I find the Sapling HD seed?
 
