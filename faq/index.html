@@ -435,13 +435,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#how-do-i-verify-the-download-file" title="How do I verify the download file?" class="md-nav__link">
-    How do I verify the download file?
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -652,6 +645,13 @@
           <li class="md-nav__item">
   <a href="#can-zec-qt-wallet-export-a-121824-word-seed" title="Can zec-qt-wallet export a 12/18/24 word seed" class="md-nav__link">
     Can zec-qt-wallet export a 12/18/24 word seed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-a-seed-from-a-wallet-such-as-coinoimi-or-jaxx" title="Can I import a seed from a wallet such as Coinoimi or Jaxx?" class="md-nav__link">
+    Can I import a seed from a wallet such as Coinoimi or Jaxx?
   </a>
   
 </li>
@@ -774,13 +774,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#how-do-i-verify-the-download-file" title="How do I verify the download file?" class="md-nav__link">
-    How do I verify the download file?
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -996,6 +989,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#can-i-import-a-seed-from-a-wallet-such-as-coinoimi-or-jaxx" title="Can I import a seed from a wallet such as Coinoimi or Jaxx?" class="md-nav__link">
+    Can I import a seed from a wallet such as Coinoimi or Jaxx?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#where-can-i-find-the-sapling-hd-seed" title="Where can I find the Sapling HD seed?" class="md-nav__link">
     Where can I find the Sapling HD seed?
   </a>
@@ -1087,8 +1087,6 @@
 <p>The Android application, which is still in beta, may be downloaded <a href="https://github.com/adityapk00/zqwandroid/releases">from here</a>.</p>
 <h3 id="which-installer-should-i-download">Which installer should I download?<a class="headerlink" href="#which-installer-should-i-download" title="Permanent link">&para;</a></h3>
 <p>See the <a href="/installation/#download-and-install">installation</a> section for more details specific for your platform.</p>
-<h3 id="how-do-i-verify-the-download-file">How do I verify the download file?<a class="headerlink" href="#how-do-i-verify-the-download-file" title="Permanent link">&para;</a></h3>
-<p>// TODO update this once signed releases are pushed</p>
 <h2 id="blockchain">Blockchain<a class="headerlink" href="#blockchain" title="Permanent link">&para;</a></h2>
 <h3 id="is-zec-qt-wallet-a-light-client">Is zec-qt-wallet a light client?<a class="headerlink" href="#is-zec-qt-wallet-a-light-client" title="Permanent link">&para;</a></h3>
 <p>No, zec-qt-wallet requires a full <code>zcashd</code> node to operate. A <a href="https://z.cash/blog/zcash-reference-wallet-light-client-protocol/">light client protocol</a> is currently in development that would substantially reduce the storage and bandwidth requirements for a light wallet.</p>
@@ -1173,10 +1171,14 @@
 <p>No, addresses cannot be removed from the wallet. It is advised that you <a href="/using-zec-qt-wallet/#export-a-single-private-key">export the private keys</a> for addresses you are interested in and then delete the <code>wallet.dat</code> file. You can then <a href="/using-zec-qt-wallet/#importing-private-keys">import the private keys</a> you require in a fresh, empty wallet.</p>
 <h3 id="seed-phrases">Seed phrases<a class="headerlink" href="#seed-phrases" title="Permanent link">&para;</a></h3>
 <p>//TODO</p>
+<p>//Can I import a seed word from Coinomi etc&hellip; No you need to convert to private key via <list website here> https://coinomi.freshdesk.com/support/solutions/articles/29000009717-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys-  https://iancoleman.io/bip39/</p>
 <h4 id="can-zec-qt-wallet-export-a-121824-word-seed">Can zec-qt-wallet export a 12/18/24 word seed<a class="headerlink" href="#can-zec-qt-wallet-export-a-121824-word-seed" title="Permanent link">&para;</a></h4>
 <p>//TODO</p>
 <p>No, <code>zcashd</code> does not support BIP xxx. Sapling does use a HD wallet xxx https://z.cash/blog/sapling-in-hd/</p>
 <p>https://github.com/zcash/zcash/issues/2673</p>
+<h4 id="can-i-import-a-seed-from-a-wallet-such-as-coinoimi-or-jaxx">Can I import a seed from a wallet such as Coinoimi or Jaxx?<a class="headerlink" href="#can-i-import-a-seed-from-a-wallet-such-as-coinoimi-or-jaxx" title="Permanent link">&para;</a></h4>
+<p>&hellip;</p>
+<p>You cannot import seed words but you can use a tool to obtain the private keys for the seed words and then import these into zec-qt-wallet.</p>
 <h4 id="where-can-i-find-the-sapling-hd-seed">Where can I find the Sapling HD seed?<a class="headerlink" href="#where-can-i-find-the-sapling-hd-seed" title="Permanent link">&para;</a></h4>
 <p>https://z.cash/blog/sapling-in-hd/</p>
 <p>In zcashd only Sapling addresses are HD compatible. There is a Sapling master seed but this is currently not accessible to the zec-qt-wallet. To get this seed you need to run the following command via the zcashd CLI. <code>zcash-cli z_exportwallet</code> having set an export path in your <code>zcash.conf</code>. The Sapling seed will be displayed at the top of the file in the format&hellip;</p>
@@ -1188,7 +1190,7 @@
 <h3 id="how-do-i-upgrade-from-winzec">How do I upgrade from WinZEC?<a class="headerlink" href="#how-do-i-upgrade-from-winzec" title="Permanent link">&para;</a></h3>
 <p>WinZEC has now been deprecated. You can simply install zec-qt-wallet and it&rsquo;ll use the existing data directory and wallet from WinZEC and operate as normal.</p>
 <h3 id="can-i-import-the-winzec-address-book">Can I import the WinZEC address book?<a class="headerlink" href="#can-i-import-the-winzec-address-book" title="Permanent link">&para;</a></h3>
-<p>Yes, browse to the location of the address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\YourUsername\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
+<p>Yes, browse to the location of the address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\username\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
 <p><img alt="Import address book" src="../images/import-address-book.png" /></p>
 <h2 id="in-what-languages-is-zec-qt-wallet-available">In what languages is zec-qt-wallet available?<a class="headerlink" href="#in-what-languages-is-zec-qt-wallet-available" title="Permanent link">&para;</a></h2>
 <p>Currently, it is available in Frech, Spanish and Portuguese. If you want to help by translating see the <a href="/translations/">Translating zec-qt-wallet</a> page.</p>
