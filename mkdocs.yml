@@ -23,7 +23,6 @@ theme:
 
 # Customization
 extra:
-  manifest: 'manifest.webmanifest'
   social:
     - type: 'github'
       link: 'https://github.com/ZcashFoundation/zec-qt-wallet/'
