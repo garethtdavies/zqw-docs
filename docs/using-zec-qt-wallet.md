@@ -38,7 +38,7 @@ Once you've generated an address and have sent some funds to it, you can send so
 
 You can only send funds with at least one confirmation. While transactions are being confirmed, they are easily identifiable as they are highlighted in red.
 
-Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. [The Memo field](/using-zec-qt-wallet/#encrypted-memo-field) is only available when sending **to** a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the [Options section](/using-zec-qt-wallet/#zeq-qt-wallet-options) if you wish to customise this behviour and understand the implications.
+Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. [The Memo field](/using-zec-qt-wallet/#encrypted-memo-field) is only available when sending **to** a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the [Options section](/using-zec-qt-wallet/#zeq-qt-wallet-options) if you wish to customise this behaviour and understand the implications.
 
 !!! info "Shielded send requirements"
     Sending Sapling transaction require little resource usage and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 70-90 seconds and require an additional 1.3GB of memory to perform the spend. 
@@ -72,7 +72,7 @@ zec-qt-wallet provides multiple options to ensure your wallet and keys are backe
 
 ### Export a single private key
 
-To export a single private key on the **Balance** tab right click on the address and choose **Get private key** from the context menu. Alternatively on the **Receive** tab choose the address in question and click the **Export Private Key**. The output of both is the private key which you can copy to a secure storage medium or be used to import into other applications.
+To export a single private key on the **Balance** tab right click on the address and choose **Get private key** from the context menu. Alternatively, on the **Receive** tab choose the address in question and click the **Export Private Key**. The output of both is the private key which you can copy to a secure storage medium or be used to import into other applications.
 
 ![backup private key](images/backup-private-key.png)
 
@@ -113,7 +113,7 @@ Choose this option to allow the ability to change the default 0.0001 ZEC transac
 
 ### Shield change to your Sapling address
 
-Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to youur funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the **Shield change from t-Addresses to your sapling address** option. As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.
+Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the **Shield change from t-Addresses to your sapling address** option. As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.
 
 ### Connect via TOR
 
@@ -172,7 +172,7 @@ You can only include a memo when sending **to** a shielded address. To include a
 
 ### Including a reply-to address
 
-If you want to send a reply-to address in the memo field, for example if you are using the memo field as an encrypted chat application, zec-qt-wallet allows you to include a reply-to address in a standard format. To use, press the **Include Reply Address** and the sending address will automatically be inserted.
+If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, zec-qt-wallet allows you to include a reply-to address in a standard format. To use, press the **Include Reply Address** and the sending address will automatically be inserted.
 
 ![Memo reply to address](images/memo-reply-address.png)
 
@@ -224,7 +224,4 @@ ssh -L8232:127.0.0.1:8232 user@remotehost
 You can disable the embedded `zcashd` and force zec-qt-wallet to only connect to an external node by starting zec-qt-wallet with the `-no-embedded` option.
 
 !!! danger "Exposing RPC port"
-    Using the RPC port over a remote interface is NOT RECOMMENDED, because
-    that will cause the rpcpassword to be transmitted over the network
-    unencrypted, allowing any observer to steal your keys + Zcash and take
-    over the OS account running zcashd.
+    Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash and take over the OS account running zcashd.

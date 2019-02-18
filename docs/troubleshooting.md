@@ -66,7 +66,7 @@ You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as
 
 ## How to perform a wallet rescan
 
-!!! note "Potentially slow wallet rescan"
+!!! info "Potentially slow wallet rescan"
     Depending on the number of addresses in your wallet (particularly shielded addresses) a wallet rescan can be slow. Simply leave it running until the process is complete.
 
 If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start `zcashd` with the `-rescan` option. There are a couple of methods to achieve this and this process will be improved in future versions of the zec-qt-wallet.
