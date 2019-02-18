@@ -175,13 +175,16 @@ If you want to send a reply to address in the memo field for example if you are 
 
 ### Replying to a memo
 
-If you receive a transaction with a memo that contains a [reply address](#), you can now reply to it from the transactions table. Simply right-click the transaction and choose **Reply to xxx**.
+If you receive a transaction with a memo that contains a [reply address](#/using-zec-qt-wallet/#including-a-reply-address), you can now reply to it from the transactions table. Simply right-click the transaction and choose **Reply to xxx**.
 
 ![Reply to a memo](images/memo-reply-to.png)
 
 ## Exporting transactions
 
-zec-qt-wallet allows you to export all transactions via the **File->Export Transactions** menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: Type    Address    Date/Time    Amount    Memo
+zec-qt-wallet allows you to export all transactions via the **File->Export Transactions** menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: 
+
+| Type   | Address  | Date/Time    | Amount    | Memo   |
+| ---    | ---      | ---          | ---       | ---    |
 
 ## Apps
 
@@ -206,6 +209,8 @@ The `zcash.conf` file may be used to customise how the `zcashd` software behaves
 * Linux: `~/.zcash/zcash.conf`
 
 ## Connecting to an external `zcashd`
+
+If youu have an external `zcashd` running zec-qt-wallet will attempt to connect to it.
 
 !!! danger "Exposing "
     Using the RPC port over a remote interface is NOT RECOMMENDED, because
