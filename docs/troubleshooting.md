@@ -47,7 +47,7 @@ By default `zcashd` runs on the following ports.
 * **18232** for testnet RPC
 * **18233** for testnet peer-to-peer network
 
-You may override any of these values in [`zcash.conf`](/faq/#where-is-zcashconf-located).
+You may override any of these values in [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf).
 
 ## My transaction didn't get mined
 
@@ -95,7 +95,7 @@ Once the rescan has been completed and the external `zcashd` node has been stopp
 
 ### Editing `zcash.conf`
 
-As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/faq/#where-is-zcashconf-located) and add the line `rescan=1` and then start and stop zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened.
+As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zec-qt-wallet/#customising-zcashconf) and add the line `rescan=1` and then start and stop zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened.
 
 ## How to perform a reindex
 
@@ -124,7 +124,7 @@ If all else fails, you can run an external `zcashd` and zec-qt-wallet will conne
 
 ### Authentication error
 
-Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from `zcash.conf`. If it doesn't for some reason, you can set the username/password in the **File->Settings** menu. If you are connecting to a remote node, make sure that `zcashd` on the remote machine is accepting connections from your machine. The target machine's firewall needs to allow connections from your host and also `zcashd` is set to be configured to accept connections from this host.
+Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf). If it doesn't for some reason, you can set the username/password in the **File->Settings** menu. If you are connecting to a remote node, make sure that `zcashd` on the remote machine is accepting connections from your machine. The target machine's firewall needs to allow connections from your host and also `zcashd` is set to be configured to accept connections from this host.
 
 !!! danger "Using the RPC port over a remote interface is NOT RECOMMENDED"
     Using the RPC port over a remote interface is NOT RECOMMENDED, because
