@@ -1017,10 +1017,30 @@ addnode=zcashuhmzycmlwld.onion
 <p>If you want to send a reply to address in the memo field for example if you are using the memo field as an encrypted chat application the zec-qt-wallet allows you to include a reply address in a standard format. To use, press the <strong>Include Reply Address</strong> and the sending address will automatically be inserted.</p>
 <p><img alt="Memo reply to address" src="../images/memo-reply-address.png" /></p>
 <h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
-<p>If you receive a transaction with a memo that contains a <a href="#">reply address</a>, you can now reply to it from the transactions table. Simply right-click the transaction and choose <strong>Reply to xxx</strong>.</p>
+<p>If you receive a transaction with a memo that contains a <a href="#/using-zec-qt-wallet/#including-a-reply-address">reply address</a>, you can now reply to it from the transactions table. Simply right-click the transaction and choose <strong>Reply to xxx</strong>.</p>
 <p><img alt="Reply to a memo" src="../images/memo-reply-to.png" /></p>
 <h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
-<p>zec-qt-wallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: Type    Address    Date/Time    Amount    Memo</p>
+<p>zec-qt-wallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: </p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Address</th>
+<th>Date/Time</th>
+<th>Amount</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet bundles some applications to make common tasks simpler.</p>
 <h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
@@ -1036,6 +1056,7 @@ addnode=zcashuhmzycmlwld.onion
 <li>Linux: <code>~/.zcash/zcash.conf</code></li>
 </ul>
 <h2 id="connecting-to-an-external-zcashd">Connecting to an external <code>zcashd</code><a class="headerlink" href="#connecting-to-an-external-zcashd" title="Permanent link">&para;</a></h2>
+<p>If youu have an external <code>zcashd</code> running zec-qt-wallet will attempt to connect to it.</p>
 <div class="admonition danger">
 <p class="admonition-title">Exposing </p>
 <p>Using the RPC port over a remote interface is NOT RECOMMENDED, because
