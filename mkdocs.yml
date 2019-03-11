@@ -21,6 +21,7 @@ theme:
     code: 'Roboto Mono'
   logo: 'images/logo.svg'
   favicon: 'images/favicon.ico'  
+  custom_dir: 'custom_theme'
 
 # Customization
 extra:
@@ -46,6 +47,11 @@ copyright: If you wish to improve these docs, please <a href="https://github.com
 
 extra_css:
   - css/style.css
+  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js
+  - javascript/algolia.js  
 
 # Fix the navigation
 nav:
