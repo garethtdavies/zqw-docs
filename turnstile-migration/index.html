@@ -10,10 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
+        <meta name="description" content="ZecWallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
       
       
-        <link rel="canonical" href="https://docs.zecqtwallet.com/turnstile-migration/">
+        <link rel="canonical" href="https://docs.zecwallet.co/turnstile-migration/">
       
       
         <meta name="author" content="Zcash Foundation">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Turnstile Migration - zec-qt-wallet Docs</title>
+        <title>Turnstile Migration - ZecWallet Docs</title>
       
     
     
@@ -119,7 +119,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://docs.zecqtwallet.com" title="zec-qt-wallet Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-header-nav__button md-logo">
           
             <img src="../images/logo.svg" width="24" height="24">
           
@@ -133,7 +133,7 @@
           
             
               <span class="md-header-nav__topic">
-                zec-qt-wallet Docs
+                ZecWallet Docs
               </span>
               <span class="md-header-nav__topic">
                 Turnstile Migration
@@ -181,7 +181,7 @@
   
 
 
-  <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -190,7 +190,7 @@
       </div>
     
     <div class="md-source__repository">
-      ZcashFoundation/zec-qt-wallet
+      ZcashFoundation/zecwallet
     </div>
   </a>
 
@@ -215,12 +215,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.zecqtwallet.com" title="zec-qt-wallet Docs" class="md-nav__button md-logo">
+    <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-nav__button md-logo">
       
         <img src="../images/logo.svg" width="48" height="48">
       
     </a>
-    zec-qt-wallet Docs
+    ZecWallet Docs
   </label>
   
     <div class="md-nav__source">
@@ -230,7 +230,7 @@
   
 
 
-  <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -239,7 +239,7 @@
       </div>
     
     <div class="md-source__repository">
-      ZcashFoundation/zec-qt-wallet
+      ZcashFoundation/zecwallet
     </div>
   </a>
 
@@ -324,10 +324,46 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
-      Using zec-qt-wallet
+    <a href="../using-zecwallet/" title="Using ZecWallet" class="md-nav__link">
+      Using ZecWallet
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../video-tutorials/" title="Video Tutorials" class="md-nav__link">
+      Video Tutorials
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -431,8 +467,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../translations/" title="Translating zec-qt-wallet" class="md-nav__link">
-      Translating zec-qt-wallet
+    <a href="../translations/" title="Translating ZecWallet" class="md-nav__link">
+      Translating ZecWallet
     </a>
   </li>
 
@@ -543,11 +579,11 @@
 <hr />
 <div class="admonition info">
 <p class="admonition-title">This is not an official implementation of the turnstile.</p>
-<p><code>zcashd</code> has yet to implement support for the Sapling turnstile. There is an existing proposal in the form of a ZIP and you can follow the progress of development <a href="https://github.com/zcash/zips/pull/197">here</a>. zec-qt-wallet is an individual implementation following the <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations">suggested privacy recommendations</a> for implementation of the turnstile. If you are concerned, then wait until the official RPC tool is released into <code>zcashd</code> before migrating funds.</p>
+<p><code>zcashd</code> has yet to implement support for the Sapling turnstile. There is an existing proposal in the form of a ZIP and you can follow the progress of development <a href="https://github.com/zcash/zips/pull/197">here</a>. ZecWallet is an individual implementation following the <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations">suggested privacy recommendations</a> for implementation of the turnstile. If you are concerned, then wait until the official RPC tool is released into <code>zcashd</code> before migrating funds.</p>
 </div>
 <h2 id="turnstile-migration-overview">Turnstile Migration overview<a class="headerlink" href="#turnstile-migration-overview" title="Permanent link">&para;</a></h2>
 <p><a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html">The Sapling turnstile</a> is an auditing mechanism for the number of ZEC in circulation. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses. To achieve this, owners of shielded ZEC are required to send their balances to a transparent address before sending to Sapling shielded addresses.</p>
-<p>If you simply send the funds from a Sprout address to a transparent address and onwards to a Sapling address it would be relatively trivial to link the balances. zec-qt-wallet can migrate your Sprout funds to a Sapling address in a privacy-preserving manner following the <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations">privacy recommendations</a> by:</p>
+<p>If you simply send the funds from a Sprout address to a transparent address and onwards to a Sapling address it would be relatively trivial to link the balances. ZecWallet can migrate your Sprout funds to a Sapling address in a privacy-preserving manner following the <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations">privacy recommendations</a> by:</p>
 <ul>
 <li>Creating new transparent addresses in your wallet to move from Sprout to transparent addresses.</li>
 <li>Splits the funds across multiple transparent addresses over multiple blocks.</li>
@@ -566,7 +602,7 @@
 <p><img alt="Turnstile progress" src="../images/turnstile-progress.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">Backup your wallet.dat file after starting the migration.</p>
-<p>zec-qt-wallet creates <strong>new</strong> transparent addresses for the turnstile migration. You must create a backup after confirming the migration to ensure you have the private keys for these intermediate transparent addresses in case there is an issue. To do so, visit <strong>File-&gt;Backup wallet.dat</strong>.</p>
+<p>ZecWallet creates <strong>new</strong> transparent addresses for the turnstile migration. You must create a backup after confirming the migration to ensure you have the private keys for these intermediate transparent addresses in case there is an issue. To do so, visit <strong>File-&gt;Backup wallet.dat</strong>.</p>
 </div>
 <h3 id="aborting-the-turnstile-migration">Aborting the turnstile migration<a class="headerlink" href="#aborting-the-turnstile-migration" title="Permanent link">&para;</a></h3>
 <p>If at any time you wish to abort the migration, visit <strong>Apps-&gt;Sapling Turnstile</strong> and choose <strong>Abort</strong>, and no further transactions will take place. After aborting, all the funds remain in the addresses when the migration was aborted.</p>
@@ -641,9 +677,9 @@
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/ZcashFoundation/zecwallet/" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/zecwallet" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

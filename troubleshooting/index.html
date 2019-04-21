@@ -10,10 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
+        <meta name="description" content="ZecWallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
       
       
-        <link rel="canonical" href="https://docs.zecqtwallet.com/troubleshooting/">
+        <link rel="canonical" href="https://docs.zecwallet.co/troubleshooting/">
       
       
         <meta name="author" content="Zcash Foundation">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Troubleshooting Issues - zec-qt-wallet Docs</title>
+        <title>Troubleshooting Issues - ZecWallet Docs</title>
       
     
     
@@ -119,7 +119,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://docs.zecqtwallet.com" title="zec-qt-wallet Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-header-nav__button md-logo">
           
             <img src="../images/logo.svg" width="24" height="24">
           
@@ -133,7 +133,7 @@
           
             
               <span class="md-header-nav__topic">
-                zec-qt-wallet Docs
+                ZecWallet Docs
               </span>
               <span class="md-header-nav__topic">
                 Troubleshooting Issues
@@ -181,7 +181,7 @@
   
 
 
-  <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -190,7 +190,7 @@
       </div>
     
     <div class="md-source__repository">
-      ZcashFoundation/zec-qt-wallet
+      ZcashFoundation/zecwallet
     </div>
   </a>
 
@@ -215,12 +215,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.zecqtwallet.com" title="zec-qt-wallet Docs" class="md-nav__button md-logo">
+    <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-nav__button md-logo">
       
         <img src="../images/logo.svg" width="48" height="48">
       
     </a>
-    zec-qt-wallet Docs
+    ZecWallet Docs
   </label>
   
     <div class="md-nav__source">
@@ -230,7 +230,7 @@
   
 
 
-  <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -239,7 +239,7 @@
       </div>
     
     <div class="md-source__repository">
-      ZcashFoundation/zec-qt-wallet
+      ZcashFoundation/zecwallet
     </div>
   </a>
 
@@ -324,10 +324,46 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
-      Using zec-qt-wallet
+    <a href="../using-zecwallet/" title="Using ZecWallet" class="md-nav__link">
+      Using ZecWallet
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../video-tutorials/" title="Video Tutorials" class="md-nav__link">
+      Video Tutorials
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -406,6 +442,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-cant-generate-a-new-shielded-z-address" title="I can't generate a new shielded (z) address" class="md-nav__link">
+    I can't generate a new shielded (z) address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Some of my shielded transactions are not displayed in the transaction tab" class="md-nav__link">
     Some of my shielded transactions are not displayed in the transaction tab
   </a>
@@ -426,6 +469,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedded-zcashd" title="Embedded zcashd" class="md-nav__link">
+    Embedded zcashd
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#via-an-external-zcashd" title="Via an external zcashd" class="md-nav__link">
@@ -449,6 +499,13 @@
         <li class="md-nav__item">
   <a href="#how-to-perform-a-reindex" title="How to perform a reindex" class="md-nav__link">
     How to perform a reindex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unknown-errors" title=""Unknown Errors"" class="md-nav__link">
+    "Unknown Errors"
   </a>
   
 </li>
@@ -542,8 +599,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../translations/" title="Translating zec-qt-wallet" class="md-nav__link">
-      Translating zec-qt-wallet
+    <a href="../translations/" title="Translating ZecWallet" class="md-nav__link">
+      Translating ZecWallet
     </a>
   </li>
 
@@ -647,6 +704,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-cant-generate-a-new-shielded-z-address" title="I can't generate a new shielded (z) address" class="md-nav__link">
+    I can't generate a new shielded (z) address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Some of my shielded transactions are not displayed in the transaction tab" class="md-nav__link">
     Some of my shielded transactions are not displayed in the transaction tab
   </a>
@@ -667,6 +731,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedded-zcashd" title="Embedded zcashd" class="md-nav__link">
+    Embedded zcashd
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#via-an-external-zcashd" title="Via an external zcashd" class="md-nav__link">
@@ -690,6 +761,13 @@
         <li class="md-nav__item">
   <a href="#how-to-perform-a-reindex" title="How to perform a reindex" class="md-nav__link">
     How to perform a reindex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unknown-errors" title=""Unknown Errors"" class="md-nav__link">
+    "Unknown Errors"
   </a>
   
 </li>
@@ -777,15 +855,15 @@
 
 <p>On Windows <code>%HOMEPATH%</code> is typically <code>C:\Users\username</code> where <code>username</code> is your username. </p>
 <h2 id="the-zec-qt-walletlog-file">The <code>zec-qt-wallet.log</code> file<a class="headerlink" href="#the-zec-qt-walletlog-file" title="Permanent link">&para;</a></h2>
-<p>As with the <code>debug.log</code> file, the <code>zec-qt-wallet.log</code> file will help to identify issues with the zec-qt-wallet application. Providing the latest output of this file can help in troubleshooting issues. The location of this file is in the following location for each platform: </p>
+<p>As with the <code>debug.log</code> file, the <code>zec-qt-wallet.log</code> file will help to identify issues with the ZecWallet application. Providing the latest output of this file can help in troubleshooting issues. The location of this file is in the following location for each platform: </p>
 <ul>
 <li>Windows: <code>%HOMEPATH%\AppData\Roaming\zec-qt-wallet-org\zec-qt-wallet\zec-qt-wallet.log</code></li>
 <li>macOS: <code>/Users/gareth/Library/Application Support/zec-qt-wallet-org/zec-qt-wallet/zec-qt-wallet.log</code></li>
 <li>Linux: <code>~/.local/share/zec-qt-wallet-org/zec-qt-wallet/zec-qt-wallet.log</code></li>
 </ul>
 <h2 id="my-node-isnt-syncing-or-is-slow-to-sync">My node isn&rsquo;t syncing or is slow to sync<a class="headerlink" href="#my-node-isnt-syncing-or-is-slow-to-sync" title="Permanent link">&para;</a></h2>
-<p>If your node isn&rsquo;t syncing or is slow to sync, first check that you are running the <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">latest version</a> of zec-qt-wallet then check that you have connections to other nodes as you may have a network issue. zec-qt-wallet will display if you are connected via the application footer. </p>
-<p><img alt="zec-qt-wallet connections" src="../images/connections.png" /></p>
+<p>If your node isn&rsquo;t syncing or is slow to sync, first check that you are running the <a href="https://github.com/ZcashFoundation/zecwallet/releases">latest version</a> of ZecWallet then check that you have connections to other nodes as you may have a network issue. ZecWallet will display if you are connected via the application footer. </p>
+<p><img alt="ZecWallet connections" src="../images/connections.png" /></p>
 <p>You can also find this information in the <strong>zcashd</strong> tab on the main menu (if you are running the embedded <code>zcashd</code>) and it will list the number of connections to other peers, which should be greater than 0. If you do not have any connections then check your internet connection, then check that the <a href="/troubleshooting/#zcashd-ports">ports required</a> for <code>zcashd</code> are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.</p>
 <p>If you are still having issues, then look in the <a href="/troubleshooting/#the-zcashd-debug-log">debug log</a> to identify any error messages.</p>
 <p>The speed of syncing is dependent on a number of variables such as memory, CPU and bandwidth as blocks are also verified in addition to being downloaded. </p>
@@ -797,13 +875,15 @@
 <li><strong>18232</strong> for testnet RPC</li>
 <li><strong>18233</strong> for testnet peer-to-peer network</li>
 </ul>
-<p>You may override any of these values in <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a>.</p>
+<p>You may override any of these values in <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a>.</p>
 <h2 id="my-transaction-didnt-get-mined">My transaction didn&rsquo;t get mined<a class="headerlink" href="#my-transaction-didnt-get-mined" title="Permanent link">&para;</a></h2>
 <p>If you send a transaction before the node is fully synced, or perhaps due to network congestion then the transaction may fail and be returned to your wallet due to the <a href="https://z.cash/blog/transaction-expiry/">Transaction Expiry</a> feature. When a user submits a transaction to the network, by default it will persist in the mempool for 20 blocks (currently approximately 50 minutes). If it has not been mined after that period, it is no longer valid and will be evicted from all mempools. The value will return to the sender’s wallet. </p>
 <h2 id="zcashd-has-no-connections"><code>zcashd</code> has no connections<a class="headerlink" href="#zcashd-has-no-connections" title="Permanent link">&para;</a></h2>
 <p>See the section on <a href="/troubleshooting/#my-node-isnt-syncing">syncing issues</a> for common resolutions to this issue.</p>
+<h2 id="i-cant-generate-a-new-shielded-z-address">I can&rsquo;t generate a new shielded (z) address<a class="headerlink" href="#i-cant-generate-a-new-shielded-z-address" title="Permanent link">&para;</a></h2>
+<p>When the wallet is first launched, and before it has synced, the Sprout <strong>New Address</strong> button is greyed out, and it is not possible to generate a new shielded address. Sprout addresses have been deprecated in ZecWallet to encourage the use of Sapling ones. The ability to create Sapling addresses is only displayed in ZecWallet once the Sapling activation height is reached (block 419200). If you need to generate a new shielded address before the wallet has synced you may do so directly from the <a href="/faq/#how-do-i-use-the-zcash-cli-command">command line interface</a> using the <code>z_getnewaddress</code> (Sapling) or <code>z_getnewaddress sprout</code> (legacy Sprout).</p>
 <h2 id="some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab">Some of my shielded transactions are not displayed in the transaction tab<a class="headerlink" href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Permanent link">&para;</a></h2>
-<p>By default, <code>zcashd</code> does not store outgoing shielded transactions. To overcome this, zec-qt-wallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to <strong>Remember shielded transactions</strong> is selected in the <a href="/using-zec-qt-wallet/#remember-shielded-transactions">wallet options</a>. There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.</p>
+<p>By default, <code>zcashd</code> does not store outgoing shielded transactions. To overcome this, ZecWallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to <strong>Remember shielded transactions</strong> is selected in the <a href="/using-zec-qt-wallet/#remember-shielded-transactions">wallet options</a>. There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.</p>
 <h2 id="sending-from-sprout-address-to-sapling-gives-an-error">Sending from Sprout address to Sapling gives an error<a class="headerlink" href="#sending-from-sprout-address-to-sapling-gives-an-error" title="Permanent link">&para;</a></h2>
 <p>You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as it must pass through the <a href="https://z.cash/blog/sapling-addresses-turnstile-migration/">Sapling turnstile</a>. See the details on the <a href="/turnstile-migration">turnstile migration</a> for details on how to move your funds from a Sprout address to a Sapling one in a privacy-preserving way.</p>
 <h2 id="how-to-perform-a-wallet-rescan">How to perform a wallet rescan<a class="headerlink" href="#how-to-perform-a-wallet-rescan" title="Permanent link">&para;</a></h2>
@@ -811,28 +891,28 @@
 <p class="admonition-title">Potentially slow wallet rescan</p>
 <p>Depending on the number of addresses in your wallet (particularly shielded addresses) a wallet rescan can be slow. Simply leave it running until the process is complete.</p>
 </div>
-<p>If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start <code>zcashd</code> with the <code>-rescan</code> option. There are a couple of methods to achieve this and this process will be improved in future versions of the zec-qt-wallet.</p>
+<h3 id="embedded-zcashd">Embedded zcashd<a class="headerlink" href="#embedded-zcashd" title="Permanent link">&para;</a></h3>
+<p>If you are using the embedded zcashd (There is a &ldquo;zcashd&rdquo; tab in ZecWallet), you can go to <code>Edit -&gt; Settings -&gt; Troubleshooting</code> and select the &ldquo;rescan&rdquo; option and click apply. You&rsquo;ll need to restart ZecWallet to start the rescan.</p>
 <h3 id="via-an-external-zcashd">Via an external <code>zcashd</code><a class="headerlink" href="#via-an-external-zcashd" title="Permanent link">&para;</a></h3>
-<p>If you are running the embedded <code>zcashd</code> you will need to run <code>zcashd</code> externally to run the rescan and once complete you can safely shut down the external <code>zcashd</code> and run zec-qt-wallet as normal. With zec-qt-wallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).</p>
+<p>If you are running the external <code>zcashd</code> you will need to restart <code>zcashd</code> after shutting down ZecWallet.  With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).</p>
 <ul>
-<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcashd.exe" -rescan"</code></li>
+<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zecwallet\zcashd.exe" -rescan"</code></li>
 <li>Windows (binaries): <code>zcashd.exe -rescan</code> from the directory of the downloaded binaries.</li>
-<li>macOS: <code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcashd -rescan</code></li>
+<li>macOS: <code>/Applications/zecwallet.app/Contents/MacOS/zcashd -rescan</code></li>
 <li>Linux (deb): <code>zcashd -rescan</code> </li>
 <li>Linux (binaries): <code>./zcashd -rescan</code> from the directory of the downloaded binaries.</li>
 </ul>
-<p>Then open zec-qt-wallet and it should connect to the running <code>zcashd</code> and you can monitor the progress of the rescan on the startup screen.</p>
-<p>Note that the command above will open an instance of <code>zcashd</code> in the foreground, you can change this behaviour by adding the <code>-daemon</code> option. You will need to manually stop <code>zcashd</code> as zec-qt-wallet will not close an externally running node. The simplest method is to run the <code>zcash-cli</code> stop command:</p>
+<p>Then open ZecWallet and it should connect to the running <code>zcashd</code> and you can monitor the progress of the rescan on the startup screen.</p>
+<p>Note that the command above will open an instance of <code>zcashd</code> in the foreground, you can change this behaviour by adding the <code>-daemon</code> option. You will need to manually stop <code>zcashd</code> as ZecWallet will not close an externally running node. The simplest method is to run the <code>zcash-cli</code> stop command:</p>
 <ul>
-<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcash-cli.exe" stop"</code></li>
+<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zecwallet\zcash-cli.exe" stop"</code></li>
 <li>Windows (binaries): <code>zcash-cli.exe stop</code> from the directory of the downloaded binaries.</li>
-<li>macOS: <code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcash-cli stop</code></li>
+<li>macOS: <code>/Applications/zecwallet.app/Contents/MacOS/zcash-cli stop</code></li>
 <li>Linux (deb): <code>zcash-cli stop</code></li>
 <li>Linux (binaries): <code>./zcash-cli stop</code> from the directory of the downloaded binaries.</li>
 </ul>
-<p>Once the rescan has been completed and the external <code>zcashd</code> node has been stopped you can continue to run zec-qt-wallet as normal.</p>
 <h3 id="editing-zcashconf">Editing <code>zcash.conf</code><a class="headerlink" href="#editing-zcashconf" title="Permanent link">&para;</a></h3>
-<p>As an alternative to the external <code>zcashd</code> you can edit the <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code> file</a> and add the line <code>rescan=1</code> and then start zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from <code>zcash.conf</code> to prevent the wallet from rescanning every time it is opened and close zec-qt-wallet as normal.</p>
+<p>As an alternative to the external <code>zcashd</code> you can edit the <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code> file</a> and add the line <code>rescan=1</code> and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from <code>zcash.conf</code> to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.</p>
 <h2 id="how-to-perform-a-reindex">How to perform a reindex<a class="headerlink" href="#how-to-perform-a-reindex" title="Permanent link">&para;</a></h2>
 <p>A reindex is sometimes required when the blockchain data becomes corrupted or you wish to enable certain features. When a reindex happens the full blockchain is redownloaded so it will take some time to complete and should only be performed where absolutely necessary.</p>
 <p>To complete a reindex simply <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">follow the instruction for a wallet rescan</a> replacing <code>-rescan</code> with <code>-reindex</code>.</p>
@@ -840,18 +920,31 @@
 </pre></div>
 
 
+<h2 id="unknown-errors">&ldquo;Unknown Errors&rdquo;<a class="headerlink" href="#unknown-errors" title="Permanent link">&para;</a></h2>
+<p>If you are seeing &ldquo;Unknown Error&rdquo; error messages, your Zcash params may have become corrupt, and ZecWallet or zcashd are having trouble. You should delete the zcash params directory and restart ZecWallet.</p>
+<p>Delete all the files under these directories:</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\ZcashParams\</code></li>
+<li>macOS: <code>~/Library/Application Support/ZcashParams/</code></li>
+<li>Linux: <code>~/.zcash-params/</code></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Large Download</p>
+<p>The params files together are about 1.7GB in size, so your download may take a while</p>
+</div>
+<p>ZecWallet will then re-download the params files when restarted. </p>
 <h2 id="the-displayed-balance-is-incorrect">The displayed balance is incorrect<a class="headerlink" href="#the-displayed-balance-is-incorrect" title="Permanent link">&para;</a></h2>
 <p>If your balance is not being correctly displayed, first ensure that your software is up to date and that your node is fully synced. If your balance is still incorrect you can perform a manual <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">wallet rescan</a> which will rescan the blockchain for missing wallet transactions on startup. Depending on the number of (shielded) addresses in the wallet, this can be (very) slow so just leave it running until complete and your balance should be reflected accurately.</p>
 <h2 id="common-error-messages">Common error messages<a class="headerlink" href="#common-error-messages" title="Permanent link">&para;</a></h2>
 <h3 id="could-not-start-embedded-zcashd">Could not start embedded zcashd<a class="headerlink" href="#could-not-start-embedded-zcashd" title="Permanent link">&para;</a></h3>
-<p>This means zec-qt-wallet couldn&rsquo;t start its embedded <code>zcashd</code> for some reason. zec-qt-wallet will show you another dialog box with the error reported from <code>zcashd</code> for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:</p>
+<p>This means ZecWallet couldn&rsquo;t start its embedded <code>zcashd</code> for some reason. ZecWallet will show you another dialog box with the error reported from <code>zcashd</code> for debugging purposes as well. You might be able to solve this by simply restarting ZecWallet, but if you repeatedly see this error, it might be one of the following reasons:</p>
 <ul>
-<li>If you compiled zec-qt-wallet yourself and are running it: <code>zcashd</code> doesn&rsquo;t come with the GitHub repository, so you&rsquo;ll have to compile <code>zcashd</code> separately and copy it over into your zec-qt-wallet directory.</li>
-<li>You might have corrupt zcash params: In this case, you may try deleting your params and letting zec-qt-wallet download them again.</li>
+<li>If you compiled ZecWallet yourself and are running it: <code>zcashd</code> doesn&rsquo;t come with the GitHub repository, so you&rsquo;ll have to compile <code>zcashd</code> separately and copy it over into your ZecWallet directory.</li>
+<li>You might have corrupt zcash params: In this case, you may try deleting your params and letting ZecWallet download them again.</li>
 </ul>
-<p>If all else fails, you can run an external <code>zcashd</code> and zec-qt-wallet will connect to it.</p>
+<p>If all else fails, you can run an external <code>zcashd</code> and ZecWallet will connect to it.</p>
 <h3 id="authentication-error">Authentication error<a class="headerlink" href="#authentication-error" title="Permanent link">&para;</a></h3>
-<p>Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a>. If it doesn&rsquo;t for some reason, you can set the username/password in the <strong>File-&gt;Settings</strong> menu. If you are connecting to a remote node, make sure that <code>zcashd</code> on the remote machine is accepting connections from your machine. The target machine&rsquo;s firewall needs to allow connections from your host and also <code>zcashd</code> is set to be configured to accept connections from this host.</p>
+<p>Normally, ZecWallet can pick up the rpcuser/rpcpassword from <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a>. If it doesn&rsquo;t for some reason, you can set the username/password in the <strong>File-&gt;Settings</strong> menu. If you are connecting to a remote node, make sure that <code>zcashd</code> on the remote machine is accepting connections from your machine. The target machine&rsquo;s firewall needs to allow connections from your host and also <code>zcashd</code> is set to be configured to accept connections from this host.</p>
 <div class="admonition danger">
 <p class="admonition-title">Using the RPC port over a remote interface is NOT RECOMMENDED</p>
 <p>Using the RPC port over a remote interface is NOT RECOMMENDED, because
@@ -862,7 +955,7 @@ over the OS account running zcashd.</p>
 <h3 id="not-enough-balance-when-sending-transactions">Not enough balance when sending transactions<a class="headerlink" href="#not-enough-balance-when-sending-transactions" title="Permanent link">&para;</a></h3>
 <p>The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn&rsquo;t let you spent unconfirmed funds. Wait for at least one confirmation and then retry the transaction.</p>
 <h2 id="my-issue-isnt-resolved">My issue isn&rsquo;t resolved<a class="headerlink" href="#my-issue-isnt-resolved" title="Permanent link">&para;</a></h2>
-<p>Open an <a href="https://github.com/ZcashFoundation/zec-qt-wallet/issues">issue on GitHub</a> or tweet at <a href="https://twitter.com/zecqtwallet">@zecqtwallet</a> for help.</p>
+<p>Open an <a href="https://github.com/ZcashFoundation/zecwallet/issues">issue on GitHub</a> or tweet at <a href="https://twitter.com/zecwallet">@zecwallet</a> for help.</p>
                 
                   
                 
@@ -883,7 +976,7 @@ over the OS account running zcashd.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../video-tutorials/" title="Video Tutorials" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -892,7 +985,7 @@ over the OS account running zcashd.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using zec-qt-wallet
+                Video Tutorials
               </span>
             </div>
           </a>
@@ -934,9 +1027,9 @@ over the OS account running zcashd.</p>
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/ZcashFoundation/zecwallet/" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/zecwallet" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 
