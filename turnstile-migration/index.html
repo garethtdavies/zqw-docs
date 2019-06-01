@@ -412,6 +412,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-the-turnstile-tool" title="Using the turnstile tool" class="md-nav__link">
+    Using the turnstile tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aborting-the-turnstile-migration" title="Aborting the turnstile migration" class="md-nav__link">
     Aborting the turnstile migration
   </a>
@@ -510,6 +517,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-the-turnstile-tool" title="Using the turnstile tool" class="md-nav__link">
+    Using the turnstile tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aborting-the-turnstile-migration" title="Aborting the turnstile migration" class="md-nav__link">
     Aborting the turnstile migration
   </a>
@@ -540,9 +554,10 @@
 <p><a href="https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html">The Sapling turnstile</a> is an auditing mechanism for the number of ZEC in circulation. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses. To achieve this, owners of shielded ZEC are required to send their balances through the transparent value pool, thus revealing the balance, before sending to Sapling shielded addresses.</p>
 <div class="admonition tip">
 <p class="admonition-title">Upgrade to version 0.6.11 or higher to use the native migration tool in zcashd</p>
-<p>Starting from <a href="https://github.com/ZcashFoundation/zecwallet/releases/tag/0.6.11">v0.6.11</a> there is support for the native Sprout to Sapling migration tool in zcashd. Documentation for the previous custom migration tool available in ZecWallet is <a href="turnstile-migration-archived">archived here</a>.</p>
+<p>Starting from <a href="https://github.com/ZcashFoundation/zecwallet/releases/tag/0.6.11">v0.6.11</a> there is support for the native Sprout to Sapling migration tool in zcashd. Documentation for the previous custom migration tool available in ZecWallet is <a href="/turnstile-migration-archived">archived here</a>.</p>
 </div>
 <p><img alt="Turnstile migration tool" src="../images/migration-tool.png" /></p>
+<h3 id="using-the-turnstile-tool">Using the turnstile tool<a class="headerlink" href="#using-the-turnstile-tool" title="Permanent link">&para;</a></h3>
 <p>To enable the turnstile migration tool navigate to <strong>Apps-&gt;Sapling Turnstile</strong> and simply check the box to enable the Sprout to Sapling migration. Whenever the blockchain reaches a 500 block height interval, up to 5 migration transactions are created with transaction amounts picked according to a random distribution moving the funds from any Sprout addresses to a Sapling one. The full specification of this tool can be found in <a href="https://github.com/zcash/zips/blob/master/zip-0308.rst">ZIP 308</a>. </p>
 <p>Please see the <a href="https://electriccoin.co/blog/sprout-to-sapling-migration-tool/">zcashd blog post</a> for further details.</p>
 <div class="admonition tip">
